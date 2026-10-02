@@ -1,0 +1,14 @@
+[
+  {"name": "Economic Times Markets", "url": "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"},
+  {"name": "Economic Times Economy", "url": "https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms"},
+  {"name": "Moneycontrol", "url": "https://www.moneycontrol.com/rss/MCtopnews.xml"},
+  {"name": "Mint Markets", "url": "https://www.livemint.com/rss/markets"},
+  {"name": "The Hindu Business", "url": "https://www.thehindu.com/business/feeder/default.rss"},
+  {"name": "Business Standard Markets", "url": "https://www.business-standard.com/rss/markets-106.rss"},
+  {"name": "BBC World", "url": "http://feeds.bbci.co.uk/news/world/rss.xml"},
+  {"name": "BBC Business", "url": "http://feeds.bbci.co.uk/news/business/rss.xml"},
+  {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml"},
+  {"name": "OilPrice.com", "url": "https://oilprice.com/rss/main"},
+  {"name": "Federal Reserve", "url": "https://www.federalreserve.gov/feeds/press_all.xml"},
+  {"name": "RBI Press Releases", "url": "https://rbi.org.in/pressreleases_rss.xml"}
+]
