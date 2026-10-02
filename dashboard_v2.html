@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Event Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f4;--panel:#fff;--ink:#14202e;--mute:#5d6b7a;--line:#d5dce3;--hot:#b3261e;--acc:#0f6e6e}
+@media(prefers-color-scheme:dark){:root{--bg:#101820;--panel:#18232e;--ink:#e6ecf1;--mute:#93a1ae;--line:#2a3846;--hot:#ff7b72;--acc:#4fc3c3}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "IBM Plex Sans",system-ui,sans-serif}
+main{max-width:920px;margin:0 auto;padding:24px 16px 64px}
+h1{font:600 28px "IBM Plex Serif",Georgia,serif;margin:0}
+h2{font:600 18px "IBM Plex Serif",Georgia,serif;margin:32px 0 10px}
+.sub{color:var(--mute);margin:4px 0 0}
+.up{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.ev{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--line);padding:10px 12px}
+.ev.High{border-left-color:var(--hot)}
+.ev b{display:block}.cd{font-variant-numeric:tabular-nums;color:var(--hot);font-weight:600}
+.bar{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 12px}
+.bar button{font:inherit;background:none;color:var(--ink);border:1px solid var(--line);padding:3px 12px;border-radius:99px;cursor:pointer}
+.bar button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+details{background:var(--panel);border:1px solid var(--line);margin-bottom:8px}
+summary{cursor:pointer;padding:12px 14px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary b{font-size:16px}
+.meta{color:var(--mute);font-size:13px}
+.tag{color:var(--acc);font-weight:600}
+.fx{margin-top:4px}
+ul{list-style:none;margin:0;padding:0 14px 12px}
+li{padding:8px 0;border-top:1px solid var(--line)}
+li a{color:var(--ink);text-decoration:none}li a:hover{text-decoration:underline}
+.empty{color:var(--mute);padding:16px;border:1px dashed var(--line)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Live Event Tracker</h1>
+  <p class="sub" id="stamp">Loading latest events…</p>
+
+  <h2>Coming up</h2>
+  <div class="up" id="up"></div>
+
+  <h2>Developing stories</h2>
+  <div class="bar" id="bar"></div>
+  <div id="threads"></div>
+</main>
+<script>
+const CATS=["All","Fed","RBI","Conflict","Crude","Commodity","Markets","Other"];
+let data={threads:[],upcoming:[]},cat="All";
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safe=u=>/^https?:\/\//.test(u)?u:"#";
+function ago(iso){const m=Math.max(0,(Date.now()-new Date(iso))/6e4);
+  return m<60?Math.round(m)+" min ago":m<1440?Math.round(m/60)+" h ago":Math.round(m/1440)+" d ago"}
+function until(iso){const s=(new Date(iso)-Date.now())/1e3;
+  if(s<=0)return"happening now";const d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);
+  return"in "+(d?d+"d ":"")+(h||d?h+"h ":"")+m+"m"}
+function drawUp(){
+  $("up").innerHTML=data.upcoming.length?data.upcoming.map(e=>`<div class="ev ${esc(e.impact)}">
+    <b>${esc(e.title)}</b><span class="meta">${esc(e.country)} · ${new Date(e.time).toLocaleString([],{weekday:"short",hour:"2-digit",minute:"2-digit"})}</span>
+    <div class="cd">${until(e.time)}</div>
+    ${e.forecast||e.previous?`<div class="meta">Forecast ${esc(e.forecast||"–")}, previous ${esc(e.previous||"–")}</div>`:""}</div>`).join("")
+    :'<div class="empty">No major events scheduled this week.</div>'}
+function drawThreads(){
+  $("bar").innerHTML=CATS.map(c=>`<button aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join("");
+  const list=data.threads.filter(t=>cat==="All"||t.category===cat);
+  $("threads").innerHTML=list.length?list.map(t=>`<details><summary>
+    <span class="tag">${esc(t.category)}</span> <b>${esc(t.title)}</b>
+    <div class="meta">${t.items.length} update${t.items.length>1?"s":""}, latest ${ago(t.updated)}</div>
+    ${t.effect?`<div class="fx">Likely effect: ${esc(t.effect)}</div>`:""}</summary>
+    <ul>${t.items.map(i=>`<li><a href="${esc(safe(i.link))}" target="_blank" rel="noopener">${esc(i.title)}</a>
+    <div class="meta">${esc(i.source)}, ${ago(i.time)}</div></li>`).join("")}</ul></details>`).join("")
+    :'<div class="empty">No stories in this category yet. New ones appear after the next update.</div>'}
+$("bar").onclick=e=>{if(e.target.dataset.c){cat=e.target.dataset.c;drawThreads()}};
+async function load(){
+  try{const r=await fetch("events.json?t="+Date.now());if(!r.ok)throw 0;data=await r.json();
+    $("stamp").textContent="Updated "+ago(data.updated)+". Refreshes every 5 minutes."}
+  catch{$("stamp").textContent="Couldn't load events.json. Run the workflow once from the Actions tab."}
+  drawUp();drawThreads()}
+load();setInterval(load,3e5);setInterval(drawUp,6e4);
+</script>
+</body>
+</html>
