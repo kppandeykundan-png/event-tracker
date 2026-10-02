@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T22:52:30.989469+00:00",
+ "updated": "2026-10-02T23:03:42.542856+00:00",
  "threads": [
   {
    "id": "tfd53bdad",
@@ -143,6 +143,24 @@
     }
    ],
    "updated": "2026-10-02T21:21:47+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t92e8ae87",
+   "title": "Crude Oil Cuts Losses as Traders Eye G-7 Fuel Release - WSJ",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "4e8ab9a894a7",
+     "title": "Crude Oil Cuts Losses as Traders Eye G-7 Fuel Release - WSJ",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOTnJNODFJQ0xlUm8zN2FkRzN6RUZRbzhPRlg2c3h3QmpyOUhKNy1UY3IwQ2d5OUltaDNIS1BjdmVQZ2RSLWsxb1hwRkNESFBSSXdOVXNOU0RNd1d4ZWY1N0JMY0M4VFNBYkpYRUE4VzdJVnB3Z0VidGVraER4SUctdk10cGFxZnYybmpvTFAxdW84MXVYOU9nTGp3WGY4LWpjcmxHMQ?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-02T21:21:00+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T21:21:00+00:00",
    "effect": ""
   },
   {
@@ -4664,6 +4682,24 @@
    "effect": ""
   },
   {
+   "id": "t7933922a",
+   "title": "India Emphasizes That Shipping Chaos, Not Supply, Is Driving High Oil Prices - oilprice.com",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "417ff12b77de",
+     "title": "India Emphasizes That Shipping Chaos, Not Supply, Is Driving High Oil Prices - oilprice.com",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWkRVWmpvM01mRllqZHhNcjFfZnpQZlhPZWZwOVJtQUswR0pHRmt2aHZUUFY5dTV2dXhRczVOcGNQZkZTQlBROVNaUFJiVzdraklQNmM5VUlBVnZWN0s1czQ4dlVfNTl3a2V4UGN1TWhiczM3QXg4UGFXR1V4U0JjOS1LUm42MERtMUx2RXpGdDdRTzRIbUdWNThPMTZ5aXpuLU56WFVPUjBaTG5DTjlvLThDc3ZjUDBEWkZlYlg5QWJkdXhZVjlFMHJ30gHPAUFVX3lxTE1KR282MFF5UFBxQlFZeGtUR01xVU5YNFQzdDREVmlqZWdraFduNzBQWDNhejY3OU1RamU2dXdsTnRzdFhwUlJGckdLVFFfV0ZYSU1CODZJOUZOZWZCdmN0YTdvMU4xWHpLYUEzNDVFOGVpeC1aSnpEU1lxY2lWcVJvMnNwSmJEQWl1ekRqSmwwcUVXaF9CM3pMaG94R05ILWZUYTZpSkN5NzlUbUFXVHJDc1RDZ0toenljN3N6Y0dWV0ZmZ2hFSkMtdzlHYWktOA?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-01T14:30:00+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T14:30:00+00:00",
+   "effect": ""
+  },
+  {
    "id": "t68155534",
    "title": "Foreign capital shuns India despite strong growth: S&P-Crisil report",
    "category": "Other",
@@ -5330,6 +5366,24 @@
    "effect": ""
   },
   {
+   "id": "taa6799b0",
+   "title": "U.S. Crude Oil Stockpiles Jump - WSJ",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "b1a8ea2f3aa3",
+     "title": "U.S. Crude Oil Stockpiles Jump - WSJ",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQOHZWeUtKVmhtVkpZT1p1ekRleGRvU1hRdVV2azFoQ096Wnc0Z2pyWFZJYjNBTmh3NVZZaHRabXdZaE1kUHJsZUtPVXZDRFZ3UVBUM0dJRHMwc2xuellicHpiT3UzTDRjaWVocDZKTXd5NzFiVWlHbG8tMzhzNWRNSjhiV0o?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-09-30T15:27:00+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-09-30T15:27:00+00:00",
+   "effect": ""
+  },
+  {
    "id": "t76ab9421",
    "title": "Greggs to shut four factories and cut 740 jobs",
    "category": "Other",
@@ -5391,6 +5445,24 @@
     {
      "id": "51a80e79d188",
      "title": "Middle East Crude Oil Exports Back at Prewar Levels, Analysts Say - wsj.com",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNT244S2RDMHZTTXRPcUszQzMzT09RV0pjLThiYjNRNG1va1JwOHNrWW5rWjhSWUpwVU9CV3hRQnVBYXVVX3hYV2xhaVFsQ1lQeWxRTTJPRkRsUG1VUFJfSGlwQnhjOU1Id0Nad3BVOTY0MlE0d0l2OVZXVVFMNU1QSnRlSVpMTjFHT2dBSEJ0MGFaQ2tJVkJBQ2dBY1B4NHFyVW5RQjlwV3FLYWJOc1NFaWI4OA?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-09-30T13:35:00+00:00",
+     "category": "Conflict",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-09-30T13:35:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t19912163",
+   "title": "Middle East Crude Oil Exports Back at Prewar Levels, Analysts Say - WSJ",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "4a547deee41e",
+     "title": "Middle East Crude Oil Exports Back at Prewar Levels, Analysts Say - WSJ",
      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNT244S2RDMHZTTXRPcUszQzMzT09RV0pjLThiYjNRNG1va1JwOHNrWW5rWjhSWUpwVU9CV3hRQnVBYXVVX3hYV2xhaVFsQ1lQeWxRTTJPRkRsUG1VUFJfSGlwQnhjOU1Id0Nad3BVOTY0MlE0d0l2OVZXVVFMNU1QSnRlSVpMTjFHT2dBSEJ0MGFaQ2tJVkJBQ2dBY1B4NHFyVW5RQjlwV3FLYWJOc1NFaWI4OA?oc=5",
      "source": "Google News Markets",
      "time": "2026-09-30T13:35:00+00:00",
@@ -5535,6 +5607,24 @@
     {
      "id": "80d3d649c0e8",
      "title": "Crude Oil Lower As Saudi Arabia Resumes Red Sea Oil Exports - wsj.com",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRXVfY2J4VE5CQTNyaWlYdlE1MTZaVGxmNEphMHBRanFoOVNKTFlMVmNQTllHMUpaMVFiemVMNW1BdGhGT2ZPUzhVczJTbW92bWlXcWVQMmxpTTZnYVNoRFFOUmpIbjgwc3hlZVRuUlJxODZFbGxqaWhhQjM5SW1TOU55c3R3Qy1ybzVyREdKaXZsWFJHUF9vOVN1XzMzb2lPMXVTWXVJMHNIei1z?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-09-29T13:34:00+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-09-29T13:34:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t50dc21f1",
+   "title": "Crude Oil Lower As Saudi Arabia Resumes Red Sea Oil Exports - WSJ",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "d33cfea93a9a",
+     "title": "Crude Oil Lower As Saudi Arabia Resumes Red Sea Oil Exports - WSJ",
      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRXVfY2J4VE5CQTNyaWlYdlE1MTZaVGxmNEphMHBRanFoOVNKTFlMVmNQTllHMUpaMVFiemVMNW1BdGhGT2ZPUzhVczJTbW92bWlXcWVQMmxpTTZnYVNoRFFOUmpIbjgwc3hlZVRuUlJxODZFbGxqaWhhQjM5SW1TOU55c3R3Qy1ybzVyREdKaXZsWFJHUF9vOVN1XzMzb2lPMXVTWXVJMHNIei1z?oc=5",
      "source": "Google News Markets",
      "time": "2026-09-29T13:34:00+00:00",
