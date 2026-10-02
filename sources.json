@@ -1,7 +1,7 @@
 [
   {"name": "Economic Times Markets", "url": "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"},
   {"name": "Economic Times Economy", "url": "https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms"},
-  {"name": "Moneycontrol", "url": "https://www.moneycontrol.com/rss/MCtopnews.xml"},
+  {"name": "Google News Markets", "url": "https://news.google.com/rss/search?q=RBI+OR+%22Federal+Reserve%22+OR+crude+oil+OR+Sensex&hl=en-IN&gl=IN&ceid=IN:en"},
   {"name": "Mint Markets", "url": "https://www.livemint.com/rss/markets"},
   {"name": "The Hindu Business", "url": "https://www.thehindu.com/business/feeder/default.rss"},
   {"name": "Business Standard Markets", "url": "https://www.business-standard.com/rss/markets-106.rss"},
