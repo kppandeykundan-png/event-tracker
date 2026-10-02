@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T22:24:42.423920+00:00",
+ "updated": "2026-10-02T22:38:36.211057+00:00",
  "threads": [
   {
    "id": "t3a31d08c",
@@ -4319,6 +4319,726 @@
     }
    ],
    "updated": "2026-10-01T16:37:19+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t256432cb",
+   "title": "Coal India production up 9.2% in September",
+   "category": "Other",
+   "items": [
+    {
+     "id": "f6a6a05ef0fc",
+     "title": "Coal India production up 9.2% in September",
+     "link": "https://www.thehindu.com/business/Economy/coal-india-production-up-92-in-september/article71534280.ece",
+     "source": "The Hindu Business",
+     "time": "2026-10-01T16:35:29+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T16:35:29+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t736f13d3",
+   "title": "Sebi revamps document verification system to curb fake letters and notices",
+   "category": "Other",
+   "items": [
+    {
+     "id": "5daa69780a5f",
+     "title": "Sebi revamps document verification system to curb fake letters and notices",
+     "link": "https://www.business-standard.com/markets/news/sebi-revamps-document-verification-system-to-curb-fake-letters-and-notices-126100101462_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T16:32:30+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T16:32:30+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t306aec64",
+   "title": "Algeria introduces death penalty for arsonists after deadly wildfires",
+   "category": "Other",
+   "items": [
+    {
+     "id": "ed959e6e7c9e",
+     "title": "Algeria introduces death penalty for arsonists after deadly wildfires",
+     "link": "https://www.bbc.co.uk/news/articles/cmge4exg44v5o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": "2026-10-01T16:31:35+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T16:31:35+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t6675a6fc",
+   "title": "Commercial LPG cylinder price increased by ₹65",
+   "category": "Other",
+   "items": [
+    {
+     "id": "958fc4431ea4",
+     "title": "Commercial LPG cylinder price increased by ₹65",
+     "link": "https://www.thehindu.com/business/Industry/atf-prices-increased-by-around-16-from-121-per-litre-to-137-per-litre/article71531663.ece",
+     "source": "The Hindu Business",
+     "time": "2026-10-01T16:26:27+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T16:26:27+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t1cbdf4fe",
+   "title": "Govt warns private fuel retailers over sales caps",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "aab666685197",
+     "title": "Govt warns private fuel retailers over sales caps",
+     "link": "https://www.thehindu.com/business/Industry/govt-warns-private-fuel-retailers-over-sales-caps/article71534145.ece",
+     "source": "The Hindu Business",
+     "time": "2026-10-01T16:14:20+00:00",
+     "category": "Conflict",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T16:14:20+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t8614f591",
+   "title": "NMDC’s iron ore output rose 8% in Sept to 4.04 MT, sales dip",
+   "category": "Other",
+   "items": [
+    {
+     "id": "f1a043dd79c4",
+     "title": "NMDC’s iron ore output rose 8% in Sept to 4.04 MT, sales dip",
+     "link": "https://www.thehindu.com/business/Industry/nmdcs-iron-ore-output-rose-8-in-sept-to-404-mt-sales-dip/article71534123.ece",
+     "source": "The Hindu Business",
+     "time": "2026-10-01T15:59:18+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T15:59:18+00:00",
+   "effect": ""
+  },
+  {
+   "id": "td063299d",
+   "title": "Anup Bagchi to steer HDFC Bank as RBI gives nod",
+   "category": "RBI",
+   "items": [
+    {
+     "id": "94783f3379f9",
+     "title": "Anup Bagchi to steer HDFC Bank as RBI gives nod",
+     "link": "https://www.thehindu.com/business/Industry/anup-bagchi-to-steer-hdfc-bank-as-rbi-gives-nod/article71533830.ece",
+     "source": "The Hindu Business",
+     "time": "2026-10-01T15:45:41+00:00",
+     "category": "RBI",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T15:45:41+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t977f278a",
+   "title": "Explosions heard in Ethiopia's capital after drone flights banned",
+   "category": "Other",
+   "items": [
+    {
+     "id": "ad8872202e2c",
+     "title": "Explosions heard in Ethiopia's capital after drone flights banned",
+     "link": "https://www.bbc.co.uk/news/articles/c3vgygpqky9zo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": "2026-10-01T15:05:36+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T15:05:36+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t95ada72d",
+   "title": "Nifty's eight-week slide puts 2001 low back in sight amid oil spike",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "e0d5c47fdea8",
+     "title": "Nifty's eight-week slide puts 2001 low back in sight amid oil spike",
+     "link": "https://www.business-standard.com/markets/news/nifty-s-eight-week-slide-puts-2001-record-back-in-sight-as-brent-bites-126100101089_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T14:54:19+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T14:54:19+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t5a7bc09d",
+   "title": "Sindhuja raises ₹100 crore via NCDs; Carlsberg gets Sebi approval for IPO",
+   "category": "Other",
+   "items": [
+    {
+     "id": "5d203da6b0b8",
+     "title": "Sindhuja raises ₹100 crore via NCDs; Carlsberg gets Sebi approval for IPO",
+     "link": "https://www.business-standard.com/markets/news/sindhuja-raises-100-crore-via-ncds-carlsberg-gets-sebi-approval-for-ipo-126100101273_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T14:40:41+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T14:40:41+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t33d171b6",
+   "title": "India can emerge as key rice supplier as global production falls 9% and demand rises 14%: IREF",
+   "category": "Other",
+   "items": [
+    {
+     "id": "a2e53e35530b",
+     "title": "India can emerge as key rice supplier as global production falls 9% and demand rises 14%: IREF",
+     "link": "https://economictimes.indiatimes.com/news/economy/agriculture/india-can-emerge-as-key-rice-supplier-as-global-production-falls-9-and-demand-rises-14-iref/articleshow/134622141.cms",
+     "source": "Economic Times Economy",
+     "time": "2026-10-01T14:39:14+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T14:39:14+00:00",
+   "effect": ""
+  },
+  {
+   "id": "teec03692",
+   "title": "September IPO fundraising highest so far in CY26 amid Nifty's big fall",
+   "category": "Other",
+   "items": [
+    {
+     "id": "cae7f0630b4a",
+     "title": "September IPO fundraising highest so far in CY26 amid Nifty's big fall",
+     "link": "https://www.business-standard.com/markets/news/september-fundraising-highest-for-any-month-this-year-amid-nifty-s-big-fall-126100101167_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T14:33:49+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T14:33:49+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t4a122d09",
+   "title": "India Emphasizes That Shipping Chaos, Not Supply, Is Driving High Oil Prices - Crude Oil Prices Today | OilPrice.com",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "03d188562a2d",
+     "title": "India Emphasizes That Shipping Chaos, Not Supply, Is Driving High Oil Prices - Crude Oil Prices Today | OilPrice.com",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWkRVWmpvM01mRllqZHhNcjFfZnpQZlhPZWZwOVJtQUswR0pHRmt2aHZUUFY5dTV2dXhRczVOcGNQZkZTQlBROVNaUFJiVzdraklQNmM5VUlBVnZWN0s1czQ4dlVfNTl3a2V4UGN1TWhiczM3QXg4UGFXR1V4U0JjOS1LUm42MERtMUx2RXpGdDdRTzRIbUdWNThPMTZ5aXpuLU56WFVPUjBaTG5DTjlvLThDc3ZjUDBEWkZlYlg5QWJkdXhZVjlFMHJ30gHPAUFVX3lxTE1KR282MFF5UFBxQlFZeGtUR01xVU5YNFQzdDREVmlqZWdraFduNzBQWDNhejY3OU1RamU2dXdsTnRzdFhwUlJGckdLVFFfV0ZYSU1CODZJOUZOZWZCdmN0YTdvMU4xWHpLYUEzNDVFOGVpeC1aSnpEU1lxY2lWcVJvMnNwSmJEQWl1ekRqSmwwcUVXaF9CM3pMaG94R05ILWZUYTZpSkN5NzlUbUFXVHJDc1RDZ0toenljN3N6Y0dWV0ZmZ2hFSkMtdzlHYWktOA?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-01T14:30:00+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T14:30:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t68155534",
+   "title": "Foreign capital shuns India despite strong growth: S&P-Crisil report",
+   "category": "Other",
+   "items": [
+    {
+     "id": "3511000175f8",
+     "title": "Foreign capital shuns India despite strong growth: S&P-Crisil report",
+     "link": "https://www.business-standard.com/markets/news/foreign-capital-shuns-india-despite-strong-growth-s-p-crisil-report-126100101257_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T14:29:19+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T14:29:19+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t31d0c5bd",
+   "title": "Russian dissident Garry Kasparov says US warned him of danger to his life",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "69160d8991ff",
+     "title": "Russian dissident Garry Kasparov says US warned him of danger to his life",
+     "link": "https://www.bbc.co.uk/news/articles/c6y8z8kr5mk8o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": "2026-10-01T14:05:55+00:00",
+     "category": "Conflict",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T14:05:55+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t574c9421",
+   "title": "Rupee, bonds face pressure as US Treasury yields rise and crude tops $100",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "602fc45d3314",
+     "title": "Rupee, bonds face pressure as US Treasury yields rise and crude tops $100",
+     "link": "https://www.business-standard.com/markets/news/rupee-bonds-face-pressure-as-us-treasury-yields-rise-and-crude-tops-100-126100101136_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T13:48:20+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T13:48:20+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t462836f0",
+   "title": "Sebi to make investor awareness messages mandatory on broker apps, sites",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "58e78b41f29e",
+     "title": "Sebi to make investor awareness messages mandatory on broker apps, sites",
+     "link": "https://www.business-standard.com/markets/news/sebi-to-make-investor-awareness-messages-mandatory-on-broker-apps-sites-126100100962_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T13:34:01+00:00",
+     "category": "Conflict",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T13:34:01+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t51a694a0",
+   "title": "IPOs lap up record ₹94,205 crore in April-September FY27: Report",
+   "category": "Other",
+   "items": [
+    {
+     "id": "191226dfdcf0",
+     "title": "IPOs lap up record ₹94,205 crore in April-September FY27: Report",
+     "link": "https://www.business-standard.com/markets/news/ipos-lap-up-record-94-205-crore-in-april-september-fy27-report-126100100972_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T13:23:31+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T13:23:31+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tb63477bb",
+   "title": "Rupee slumps 37 paise to close at 96.31 against U.S. dollar",
+   "category": "Other",
+   "items": [
+    {
+     "id": "8d118cf43aa8",
+     "title": "Rupee slumps 37 paise to close at 96.31 against U.S. dollar",
+     "link": "https://www.thehindu.com/business/markets/rupee-slumps-37-paise-to-close-at-9631-against-us-dollar/article71532954.ece",
+     "source": "The Hindu Business",
+     "time": "2026-10-01T12:52:46+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T12:52:46+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t8a7e4caa",
+   "title": "Trade deals that undermine multilateralism may hit growth and exports, govt economists warn",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "f1871440152f",
+     "title": "Trade deals that undermine multilateralism may hit growth and exports, govt economists warn",
+     "link": "https://www.thehindu.com/business/Economy/trade-deals-that-undermine-multilateralism-may-hit-growth-and-exports-govt-economists-warn/article71532511.ece",
+     "source": "The Hindu Business",
+     "time": "2026-10-01T12:37:07+00:00",
+     "category": "Conflict",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T12:37:07+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t1d8b8443",
+   "title": "Kanye West's Russia shows officially cancelled after weeks of uncertainty",
+   "category": "Other",
+   "items": [
+    {
+     "id": "e69847fdbf88",
+     "title": "Kanye West's Russia shows officially cancelled after weeks of uncertainty",
+     "link": "https://www.bbc.co.uk/news/articles/cm74k417wpjxo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": "2026-10-01T12:13:28+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T12:13:28+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tf83357b8",
+   "title": "Trump's AI rebrand causes 'unprecedented' demand for Slovenian website names",
+   "category": "Other",
+   "items": [
+    {
+     "id": "0a3d6274ce8b",
+     "title": "Trump's AI rebrand causes 'unprecedented' demand for Slovenian website names",
+     "link": "https://www.bbc.co.uk/news/articles/cqx2z23xj555o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": "2026-10-01T11:37:46+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T11:37:46+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t747cd628",
+   "title": "Airtel Money to raise £529 million in LSE IPO at £5.3 billion valuation",
+   "category": "Other",
+   "items": [
+    {
+     "id": "4a3d5c0d2d94",
+     "title": "Airtel Money to raise £529 million in LSE IPO at £5.3 billion valuation",
+     "link": "https://www.business-standard.com/markets/ipo/airtel-money-to-raise-529-million-in-lse-ipo-at-5-3-billion-valuation-126100100836_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T10:56:17+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T10:56:17+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t61f51315",
+   "title": "Morepen Labs hits new high on huge volume; stock up 191% in 4 months",
+   "category": "Other",
+   "items": [
+    {
+     "id": "cf98aa72ce18",
+     "title": "Morepen Labs hits new high on huge volume; stock up 191% in 4 months",
+     "link": "https://www.business-standard.com/markets/news/morepen-labs-hits-new-high-on-huge-volume-stock-up-191-in-4-months-126100100727_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T10:07:02+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T10:07:02+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t577eb229",
+   "title": "AI boom could trigger market shocks, Bank of England boss warns",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "d5f832c1bf9b",
+     "title": "AI boom could trigger market shocks, Bank of England boss warns",
+     "link": "https://www.bbc.co.uk/news/articles/cv8e30enrkxyo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": "2026-10-01T10:05:25+00:00",
+     "category": "Conflict",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T10:05:25+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t69596c4d",
+   "title": "Who is Adam Back, the Bitcoin pioneer behind Blockstream and Liquid?",
+   "category": "Other",
+   "items": [
+    {
+     "id": "92e4dd254ea6",
+     "title": "Who is Adam Back, the Bitcoin pioneer behind Blockstream and Liquid?",
+     "link": "https://www.business-standard.com/markets/cryptocurrency/who-is-adam-back-the-bitcoin-pioneer-behind-blockstream-and-liquid-126100100684_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T09:37:52+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T09:37:52+00:00",
+   "effect": ""
+  },
+  {
+   "id": "te7f245e0",
+   "title": "Anarock Property Consultants files DRHP to raise ₹1,000 cr via IPO",
+   "category": "Other",
+   "items": [
+    {
+     "id": "669032152d73",
+     "title": "Anarock Property Consultants files DRHP to raise ₹1,000 cr via IPO",
+     "link": "https://www.business-standard.com/markets/ipo/anarock-property-consultants-files-drhp-to-raise-1-000-cr-via-ipo-126100100644_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T09:16:49+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T09:16:49+00:00",
+   "effect": ""
+  },
+  {
+   "id": "td0f972d3",
+   "title": "At 52-week lows: RIL, ONGC, M&M, Airtel, PB Fintech, 69 other BSE500 stocks",
+   "category": "Other",
+   "items": [
+    {
+     "id": "38f3215280a7",
+     "title": "At 52-week lows: RIL, ONGC, M&M, Airtel, PB Fintech, 69 other BSE500 stocks",
+     "link": "https://www.business-standard.com/markets/news/at-52-week-lows-ril-ongc-m-m-airtel-pb-fintech-69-other-bse500-stocks-on-thursday-126100100567_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T08:40:56+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T08:40:56+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t7b366828",
+   "title": "Market crash: Sensex sinks 1,280 pts intraday, at 2026 low; Nifty at 22,200",
+   "category": "Other",
+   "items": [
+    {
+     "id": "7a887fb536e1",
+     "title": "Market crash: Sensex sinks 1,280 pts intraday, at 2026 low; Nifty at 22,200",
+     "link": "https://www.business-standard.com/markets/news/why-are-markets-falling-today-sensex-crashes-1-000-pts-intraday-hits-2026-low-nifty-at-22-300-126100100568_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T08:19:39+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T08:19:39+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t00968600",
+   "title": "Multibagger stock: HFCL shares hit 5% upper circuit for 3rd straight day",
+   "category": "Other",
+   "items": [
+    {
+     "id": "89c216011cc5",
+     "title": "Multibagger stock: HFCL shares hit 5% upper circuit for 3rd straight day",
+     "link": "https://www.business-standard.com/markets/news/multibagger-stock-hfcl-shares-hit-5-upper-circuit-for-3rd-straight-day-126100100519_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T07:42:31+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T07:42:31+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t25afbbea",
+   "title": "Energy bills are rising by £60 a year - here's how you can bring that down",
+   "category": "Other",
+   "items": [
+    {
+     "id": "af28896049fe",
+     "title": "Energy bills are rising by £60 a year - here's how you can bring that down",
+     "link": "https://www.bbc.co.uk/news/articles/crm4rygl4m3o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": "2026-10-01T07:08:22+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T07:08:22+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tef92fd6d",
+   "title": "Employers should teach primary-age children about work, says Milburn",
+   "category": "Other",
+   "items": [
+    {
+     "id": "1c3a4a78ce10",
+     "title": "Employers should teach primary-age children about work, says Milburn",
+     "link": "https://www.bbc.co.uk/news/articles/cr2kwlw0p3v9o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": "2026-10-01T07:07:08+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T07:07:08+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t8fb03da0",
+   "title": "Welspun Living zooms 112% in 6 months, hits new high; what's driving stock?",
+   "category": "Other",
+   "items": [
+    {
+     "id": "3649f007cf8a",
+     "title": "Welspun Living zooms 112% in 6 months, hits new high; what's driving stock?",
+     "link": "https://www.business-standard.com/markets/news/welspun-living-zooms-112-in-6-months-hits-new-high-what-s-driving-stock-126100100439_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T07:05:57+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T07:05:57+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t78e3874f",
+   "title": "Gold rises ₹607 as rate-hold expectations strengthen; silver jumps ₹2,828",
+   "category": "Commodity",
+   "items": [
+    {
+     "id": "b88de6fc8fea",
+     "title": "Gold rises ₹607 as rate-hold expectations strengthen; silver jumps ₹2,828",
+     "link": "https://www.business-standard.com/markets/commodities/gold-rises-607-as-rate-hold-expectations-strengthen-silver-jumps-2-828-126100100452_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T07:04:57+00:00",
+     "category": "Commodity",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T07:04:57+00:00",
+   "effect": ""
+  },
+  {
+   "id": "te4fb2e1d",
+   "title": "Africa's richest man launches Kenya oil refinery despite land protests",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "1c92a758c3ac",
+     "title": "Africa's richest man launches Kenya oil refinery despite land protests",
+     "link": "https://www.bbc.co.uk/news/articles/cmkg8dpwy25po?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": "2026-10-01T07:04:27+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T07:04:27+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t9e1fb39a",
+   "title": "MTNL zooms 17% on board nod to Mumbai property sale worth ₹891.53 cr",
+   "category": "Other",
+   "items": [
+    {
+     "id": "6d4d70aecc9c",
+     "title": "MTNL zooms 17% on board nod to Mumbai property sale worth ₹891.53 cr",
+     "link": "https://www.business-standard.com/markets/news/mtnl-zooms-17-on-board-nod-to-mumbai-property-sale-worth-891-53-cr-126100100402_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T06:27:29+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T06:27:29+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t2ea5f53d",
+   "title": "India's domestic funds push IPO valuations lower amid market strain",
+   "category": "Other",
+   "items": [
+    {
+     "id": "822a3207fd81",
+     "title": "India's domestic funds push IPO valuations lower amid market strain",
+     "link": "https://www.business-standard.com/markets/ipo/india-s-domestic-funds-push-ipo-valuations-lower-amid-market-strain-126100100399_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T06:22:29+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T06:22:29+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t08c9c0b7",
+   "title": "Hero Motors hits new high; stock up 99% against issue price in 7 days",
+   "category": "Other",
+   "items": [
+    {
+     "id": "36299033e7d6",
+     "title": "Hero Motors hits new high; stock up 99% against issue price in 7 days",
+     "link": "https://www.business-standard.com/markets/news/hero-motors-hits-new-high-stock-up-99-against-issue-price-in-7-days-126100100345_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T06:02:11+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T06:02:11+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t0c83d766",
+   "title": "Adani Energy Solutions gains 5.5%; extends winning streak to 3rd session",
+   "category": "Other",
+   "items": [
+    {
+     "id": "45098110feb3",
+     "title": "Adani Energy Solutions gains 5.5%; extends winning streak to 3rd session",
+     "link": "https://www.business-standard.com/markets/news/adani-energy-solutions-gains-5-5-extends-winning-streak-to-3rd-session-126100100318_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T05:41:57+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T05:41:57+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t3193d2e2",
+   "title": "Nifty IT defies market weakness, rises 2%; Mphasis, Coforge, TCS lead",
+   "category": "Other",
+   "items": [
+    {
+     "id": "54c9e9042f67",
+     "title": "Nifty IT defies market weakness, rises 2%; Mphasis, Coforge, TCS lead",
+     "link": "https://www.business-standard.com/markets/news/nifty-it-defies-market-weakness-rises-2-mphasis-coforge-tcs-lead-126100100335_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-01T05:40:25+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T05:40:25+00:00",
    "effect": ""
   }
  ],
