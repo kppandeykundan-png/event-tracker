@@ -1,6 +1,42 @@
 {
- "updated": "2026-10-02T21:25:31.684489+00:00",
+ "updated": "2026-10-02T21:39:53.192927+00:00",
  "threads": [
+  {
+   "id": "tc56f8ca7",
+   "title": "France held 1-1 by Italy in Zidane home debut after Olise stunner",
+   "category": "Other",
+   "items": [
+    {
+     "id": "f72fbb3a98e2",
+     "title": "France held 1-1 by Italy in Zidane home debut after Olise stunner",
+     "link": "https://www.aljazeera.com/sports/2026/10/2/france-held-by-italy-in-zidanes-homecoming-after-olise-stunner?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-02T21:24:24+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T21:24:24+00:00",
+   "effect": ""
+  },
+  {
+   "id": "ta776b94b",
+   "title": "Bosnia’s elections explained",
+   "category": "Other",
+   "items": [
+    {
+     "id": "3bbd7290c65f",
+     "title": "Bosnia’s elections explained",
+     "link": "https://www.aljazeera.com/video/newsfeed/2026/10/2/bosnias-elections-explained?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-02T21:21:47+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T21:21:47+00:00",
+   "effect": ""
+  },
   {
    "id": "t59531973",
    "title": "RBI appoints Shri Sudhakar Malli as new Executive Director",
@@ -179,6 +215,24 @@
     }
    ],
    "updated": "2026-10-02T21:20:02.945462+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t964ddea0",
+   "title": "Israeli general: Gaza captives could have been freed a year earlier",
+   "category": "Other",
+   "items": [
+    {
+     "id": "4bae940e56b9",
+     "title": "Israeli general: Gaza captives could have been freed a year earlier",
+     "link": "https://www.aljazeera.com/video/newsfeed/2026/10/2/israeli-general-gaza-captives-could-have-been-freed-a-year-earlier?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-02T21:15:58+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T21:15:58+00:00",
    "effect": ""
   },
   {
@@ -434,6 +488,24 @@
    "effect": ""
   },
   {
+   "id": "t9d57309f",
+   "title": "G7 countries to release up to 100 million barrels of diesel and crude oil reserves - nbcnews.com",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "321b1a194ea7",
+     "title": "G7 countries to release up to 100 million barrels of diesel and crude oil reserves - nbcnews.com",
+     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxObmhlRXNIUGtuVXo5aWcyUVJQdk5sakdqb0JzWUZKUTdGTUxhQ0hwcTFBcHl3bW0xUEJ5TE9jcWlxclBrbThEaHFDRHlCb0c3eklaVVJYRE43c2k3T2h1RklEVXBERElZY3dVcFNOamJQcGpCX21naDRGOFVDVkg2R2xTS2Rpay1zUjJId1JVQ0NhQQ?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-02T20:07:34+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T20:07:34+00:00",
+   "effect": ""
+  },
+  {
    "id": "t2acb9c12",
    "title": "CME Group suspends launch of 10-barrel crude oil futures - Investing.com India",
    "category": "Crude",
@@ -639,6 +711,24 @@
     {
      "id": "b8a41429c5ba",
      "title": "Oil futures: Crude lower as increased flows offset rising tensions - Quantum Commodity Intelligence",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPYUhmUEJUWGtYb3dsXzdBTHZEdXJrbmlkNWRCRmlkeUNwTm5aWEl4TS1xUDItRTZFUmp2VHBHN29CRHBTTm5oUWl6OXNWVUtoZ0xwRE1BOUxjU2dzaE8xZ3owdTAySXh1d2duNjBlMFc1TlExc1hkMGE0WnN3WFYxaDY2d01MZXpZRHROSHlhVTJ1VzhXcUExblJGbHJIQVlOcW4zQ0pVbTBkdS03?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-02T18:53:42+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T18:53:42+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t91818f14",
+   "title": "Oil futures: Crude lower as increased flows offset rising tensions - qcintel.com",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "bf1f2d4b5817",
+     "title": "Oil futures: Crude lower as increased flows offset rising tensions - qcintel.com",
      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPYUhmUEJUWGtYb3dsXzdBTHZEdXJrbmlkNWRCRmlkeUNwTm5aWEl4TS1xUDItRTZFUmp2VHBHN29CRHBTTm5oUWl6OXNWVUtoZ0xwRE1BOUxjU2dzaE8xZ3owdTAySXh1d2duNjBlMFc1TlExc1hkMGE0WnN3WFYxaDY2d01MZXpZRHROSHlhVTJ1VzhXcUExblJGbHJIQVlOcW4zQ0pVbTBkdS03?oc=5",
      "source": "Google News Markets",
      "time": "2026-10-02T18:53:42+00:00",
@@ -1190,6 +1280,24 @@
    "effect": ""
   },
   {
+   "id": "t9a9319bc",
+   "title": "USA Crude Oil Stocks Rise Almost 1MM Barrels WoW - rigzone.com",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "11c3cb93faad",
+     "title": "USA Crude Oil Stocks Rise Almost 1MM Barrels WoW - rigzone.com",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSWRmcmV1QmE3MHg5bjR6eTRvbEd2ZVl1UXAzclNjMk9kdXE1bVM2WG5CNWltX0tiQ3ZRdFNiOWVKQUtmZmJKR1NTYllNSnNfZmJnQ3pKd0Ewd3ZWR0I4a3hRZVYxTm5Ob1ZaaERhYmNSQm5sdGNxUDVuSFZWR2dhakc3ZmhTLVNsaUI1NHg4RDZzcl9CQ3Y3RktIS2NQS2QxR2ZSVHl2ZFU?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-02T16:05:00+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T16:05:00+00:00",
+   "effect": ""
+  },
+  {
    "id": "t9fa0ed33",
    "title": "Oil prices drop on G7 fuel release, US jobs data boosts stocks - afp.com",
    "category": "Crude",
@@ -1269,6 +1377,24 @@
     {
      "id": "1c37ccf5ad1a",
      "title": "LIVE: France vs Italy – UEFA Nations League",
+     "link": "https://www.aljazeera.com/sports/liveblog/2026/10/2/live-france-vs-italy-uefa-nations-league?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-02T15:45:55+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T15:45:55+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t2a79c2be",
+   "title": "LIVE: France 1-1 Italy – UEFA Nations League",
+   "category": "Other",
+   "items": [
+    {
+     "id": "2a4fc15ac265",
+     "title": "LIVE: France 1-1 Italy – UEFA Nations League",
      "link": "https://www.aljazeera.com/sports/liveblog/2026/10/2/live-france-vs-italy-uefa-nations-league?traffic_source=rss",
      "source": "Al Jazeera",
      "time": "2026-10-02T15:45:55+00:00",
@@ -1439,6 +1565,600 @@
     }
    ],
    "updated": "2026-10-02T14:59:09+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t8742b0df",
+   "title": "Sumeet Bagadia's top 3 stocks to buy: HDFC Life, Cummins India, CG Power | Target, stoploss, Nifty, Bank Nifty outlook",
+   "category": "Other",
+   "items": [
+    {
+     "id": "1d3bf8dc7321",
+     "title": "Sumeet Bagadia's top 3 stocks to buy: HDFC Life, Cummins India, CG Power | Target, stoploss, Nifty, Bank Nifty outlook",
+     "link": "https://www.livemint.com/market/stock-market-news/sumeet-bagadias-top-3-stocks-to-buy-hdfc-life-cummins-india-cg-power-target-stoploss-nifty-bank-nifty-outlook-11790949673699.html",
+     "source": "Mint Markets",
+     "time": "2026-10-02T14:45:41+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:45:41+00:00",
+   "effect": ""
+  },
+  {
+   "id": "td2516bfd",
+   "title": "WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns",
+   "category": "Other",
+   "items": [
+    {
+     "id": "53a706b4c7e3",
+     "title": "WTI Whipsaws as Gulf Supply Improves and Middle East Risk Returns",
+     "link": "https://oilprice.com/Energy/Energy-General/WTI-Whipsaws-as-Gulf-Supply-Improves-and-Middle-East-Risk-Returns.html",
+     "source": "OilPrice.com",
+     "time": "2026-10-02T14:45:00+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:45:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t0208208c",
+   "title": "U.S. Exit Leaves Iraq With a Militia Problem",
+   "category": "Other",
+   "items": [
+    {
+     "id": "fddb843a3e8f",
+     "title": "U.S. Exit Leaves Iraq With a Militia Problem",
+     "link": "https://oilprice.com/Energy/Energy-General/US-Exit-Leaves-Iraq-With-a-Militia-Problem.html",
+     "source": "OilPrice.com",
+     "time": "2026-10-02T14:45:00+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:45:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t27519d58",
+   "title": "The Kremlin Consolidates Power as Russia’s Economic Pain Mounts",
+   "category": "Other",
+   "items": [
+    {
+     "id": "f7f8fc6d75dc",
+     "title": "The Kremlin Consolidates Power as Russia’s Economic Pain Mounts",
+     "link": "https://oilprice.com/Geopolitics/Europe/The-Kremlin-Consolidates-Power-as-Russias-Economic-Pain-Mounts.html",
+     "source": "OilPrice.com",
+     "time": "2026-10-02T14:45:00+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:45:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tf0300530",
+   "title": "Bets on US Federal Reserve rate hike in October fall as job market cools",
+   "category": "Other",
+   "items": [
+    {
+     "id": "a00877d67fad",
+     "title": "Bets on US Federal Reserve rate hike in October fall as job market cools",
+     "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/bets-on-us-federal-reserve-rate-hike-in-october-fall-as-job-market-cools/articleshow/134640792.cms",
+     "source": "Economic Times Markets",
+     "time": "2026-10-02T14:37:12+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:37:12+00:00",
+   "effect": ""
+  },
+  {
+   "id": "ta03b72be",
+   "title": "US jobs market sees sharp slowdown ahead of midterm elections",
+   "category": "Other",
+   "items": [
+    {
+     "id": "35a611565808",
+     "title": "US jobs market sees sharp slowdown ahead of midterm elections",
+     "link": "https://www.bbc.co.uk/news/articles/cm2d6gg0642yo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": "2026-10-02T14:30:48+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:30:48+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t3c672444",
+   "title": "U.S. Deploys Patriots to Shield Saudi Oil and Qatari Gas Facilities",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "3644a64e2d1e",
+     "title": "U.S. Deploys Patriots to Shield Saudi Oil and Qatari Gas Facilities",
+     "link": "https://oilprice.com/Latest-Energy-News/World-News/US-Deploys-Patriots-to-Shield-Saudi-Oil-and-Qatari-Gas-Facilities.html",
+     "source": "OilPrice.com",
+     "time": "2026-10-02T14:30:00+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:30:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t6cbc7e02",
+   "title": "Auto-component order wins: Decoding LTV and its implications for revenue visibility",
+   "category": "Other",
+   "items": [
+    {
+     "id": "800aca1ec80d",
+     "title": "Auto-component order wins: Decoding LTV and its implications for revenue visibility",
+     "link": "https://www.thehindu.com/business/Industry/auto-component-order-wins-decoding-ltv-and-its-implications-for-revenue-visibility/article71491434.ece",
+     "source": "The Hindu Business",
+     "time": "2026-10-02T14:27:28+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:27:28+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t047043b8",
+   "title": "Dividend jackpot shares: Coal India, Wipro, ITC, BPCL or ONGC? Which large cap stock has the highest yield? Data details",
+   "category": "Other",
+   "items": [
+    {
+     "id": "a3c79e6a4145",
+     "title": "Dividend jackpot shares: Coal India, Wipro, ITC, BPCL or ONGC? Which large cap stock has the highest yield? Data details",
+     "link": "https://www.livemint.com/market/stock-market-news/dividend-jackpot-shares-coal-india-wipro-itc-bpcl-or-ongc-which-large-cap-stock-has-the-highest-yield-data-details-11790948842766.html",
+     "source": "Mint Markets",
+     "time": "2026-10-02T14:18:43+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:18:43+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t34fd7bed",
+   "title": "Crude Oil Slides to 1-Month Low - tradingview.com",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "91982d9552cc",
+     "title": "Crude Oil Slides to 1-Month Low - tradingview.com",
+     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQlBQczVkeDNLa0llNU13VWxuQmpOUVNiM2duU1o0bHRzN3ZlR2s5VmkzUF94cjhQUGJMVVZ1c1lfZVRyMHNKX3FyZzhvMHpwZzhqX2FRamM0VS11emNCV3d3SVlKUk5ocDhQVjFzb1JRWHMyRW55QkUzc1BGNWNnUkFUb0MxRmk4Tnc?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-02T14:18:12+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:18:12+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tedaf5864",
+   "title": "G7 to release 100m oil barrels as Trump hails Europe diesel deal",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "52aec3def916",
+     "title": "G7 to release 100m oil barrels as Trump hails Europe diesel deal",
+     "link": "https://www.aljazeera.com/news/2026/10/2/trump-says-europe-agrees-to-release-massive-amount-diesel-stockpile?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-02T14:14:18+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:14:18+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tdbb19146",
+   "title": "Crude Oil Falls To Close Out the Week - WSJ",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "d3e65f17b6f2",
+     "title": "Crude Oil Falls To Close Out the Week - WSJ",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOTnJNODFJQ0xlUm8zN2FkRzN6RUZRbzhPRlg2c3h3QmpyOUhKNy1UY3IwQ2d5OUltaDNIS1BjdmVQZ2RSLWsxb1hwRkNESFBSSXdOVXNOU0RNd1d4ZWY1N0JMY0M4VFNBYkpYRUE4VzdJVnB3Z0VidGVraER4SUctdk10cGFxZnYybmpvTFAxdW84MXVYOU9nTGp3WGY4LWpjcmxHMQ?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-02T14:12:00+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:12:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t3a86a6c2",
+   "title": "Nike's struggles test investor confidence in CEO Hill's turnaround effort",
+   "category": "Other",
+   "items": [
+    {
+     "id": "dc63f67bf3e2",
+     "title": "Nike's struggles test investor confidence in CEO Hill's turnaround effort",
+     "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/nikes-struggles-test-investor-confidence-in-ceo-hills-turnaround-effort/articleshow/134641576.cms",
+     "source": "Economic Times Markets",
+     "time": "2026-10-02T14:10:13+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:10:13+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t9e050422",
+   "title": "India's forex reserves fall $18.34 billion to $747.56 billion in week ended September 25",
+   "category": "Other",
+   "items": [
+    {
+     "id": "98311cd765e2",
+     "title": "India's forex reserves fall $18.34 billion to $747.56 billion in week ended September 25",
+     "link": "https://economictimes.indiatimes.com/news/economy/indicators/indias-forex-reserves-fall-18-34-billion-to-747-56-billion-in-week-ended-september-25/articleshow/134641536.cms",
+     "source": "Economic Times Economy",
+     "time": "2026-10-02T14:07:33+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:07:33+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t4c843683",
+   "title": "G7 to Release Up to 100 Millions of Barrels of Diesel, Crude - Bloomberg.com",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "4735e4e2b6b2",
+     "title": "G7 to Release Up to 100 Millions of Barrels of Diesel, Crude - Bloomberg.com",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORnFEeF9XTkpmbllHdzRyM0xmQjkxcG1TS0ZRYUUwOUljVm52c0hkbVNLbVQxZFdyTHlIN3pwVWxWXzZDZXJlRWR6LTBWNU9UUkFya0pmUVpSNGk3MTNza0h5bVROUV9ia2h6UGZfaWVyYzNjXzhMTjhwUVNhUnMwWmp0Uy1NZGhEaEExRGZEbTZ1QmhIamRJVUxNTFpxM3NHR0I4bi1VWDdOVWl2bkFocVVn?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-02T14:04:27+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:04:27+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tbf0bab83",
+   "title": "I've seen nearly 500 executions - but never one like Christa Pike's",
+   "category": "Other",
+   "items": [
+    {
+     "id": "059d02613007",
+     "title": "I've seen nearly 500 executions - but never one like Christa Pike's",
+     "link": "https://www.bbc.co.uk/news/articles/c6d949gq47x9o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": "2026-10-02T14:01:09+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:01:09+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t05fb5bf5",
+   "title": "Europe's Soaring Gas Bill Is Sending Utilities Back to Coal",
+   "category": "Other",
+   "items": [
+    {
+     "id": "4cda4731009a",
+     "title": "Europe's Soaring Gas Bill Is Sending Utilities Back to Coal",
+     "link": "https://oilprice.com/Energy/Energy-General/Europes-Soaring-Gas-Bill-Is-Sending-Utilities-Back-to-Coal.html",
+     "source": "OilPrice.com",
+     "time": "2026-10-02T14:00:00+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T14:00:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t1e902a44",
+   "title": "Vaishali Parekh's top 3 stocks to buy: CG Power, Graphite India, Bectors Food | Target, stop-loss, market outlook",
+   "category": "Other",
+   "items": [
+    {
+     "id": "48405e343abb",
+     "title": "Vaishali Parekh's top 3 stocks to buy: CG Power, Graphite India, Bectors Food | Target, stop-loss, market outlook",
+     "link": "https://www.livemint.com/market/stock-market-news/vaishali-parekhs-top-3-stocks-to-buy-cg-power-graphite-india-bectors-food-target-stop-loss-market-outlook-11790945576103.html",
+     "source": "Mint Markets",
+     "time": "2026-10-02T13:53:52+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T13:53:52+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t1cbc3054",
+   "title": "RBI appoints Sudhakar Malli as Executive Director with effect from October 1",
+   "category": "RBI",
+   "items": [
+    {
+     "id": "bf102a454576",
+     "title": "RBI appoints Sudhakar Malli as Executive Director with effect from October 1",
+     "link": "https://economictimes.indiatimes.com/news/economy/policy/rbi-appoints-sudhakar-malli-as-executive-director-with-effect-from-october-1/articleshow/134641212.cms",
+     "source": "Economic Times Economy",
+     "time": "2026-10-02T13:45:38+00:00",
+     "category": "RBI",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T13:45:38+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t9431476f",
+   "title": "Why UK diesel prices have breached the £2 per litre mark",
+   "category": "Other",
+   "items": [
+    {
+     "id": "8c97c68ba7c0",
+     "title": "Why UK diesel prices have breached the £2 per litre mark",
+     "link": "https://www.bbc.co.uk/news/articles/c20zgjzz0e4o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": "2026-10-02T13:38:22+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T13:38:22+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tf44f8fc0",
+   "title": "Japan’s JERA Creates Oil Storage Firm to Manage National Reserve Sites",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "08a3ac2bde83",
+     "title": "Japan’s JERA Creates Oil Storage Firm to Manage National Reserve Sites",
+     "link": "https://oilprice.com/Latest-Energy-News/World-News/Japans-JERA-Creates-Oil-Storage-Firm-to-Manage-National-Reserve-Sites.html",
+     "source": "OilPrice.com",
+     "time": "2026-10-02T13:30:00+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T13:30:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t0b570496",
+   "title": "Current price of oil as of Oct. 2, 2026 - Fortune",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "30dac875178b",
+     "title": "Current price of oil as of Oct. 2, 2026 - Fortune",
+     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE52WnZZcnhHTGVJdG1mVnNPRWRmbE5ZcEdTMjZKdjRXMFNOcGRmaWZqVWZfMUNGdzdnZzB0TGROb1UwQ2VQUGl2ODdMUG5HNllCU3ZqSXRaSHpYaG5XWkx3X05R?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-02T13:20:00+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T13:20:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t5b150802",
+   "title": "Crude Oil Hits 4-week Low - tradingview.com",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "0804336f3a19",
+     "title": "Crude Oil Hits 4-week Low - tradingview.com",
+     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQLVBjOEdnZmo0Q1NqZWtmb0RuaE1PQlFfZV82WTJKaDMxbFZUT0RVUmRmOTVwRVBvT3Y1TEtsOGRqMi11eFU5cWlpcW50ZG1wSjBpTkhUZXU4OVJQNDZPcHRkS1lSRHhOaldzOTNiRHRkdTFuT0tRb2xnUFNZLWdWRUp3?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-02T13:01:38+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T13:01:38+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t337739b4",
+   "title": "With Anup Bagchi as CEO, a deep-dive into how bank stocks fared after top boss changes - Yes, RBL, IndusInd, HDFC Bank",
+   "category": "Other",
+   "items": [
+    {
+     "id": "397bcc070323",
+     "title": "With Anup Bagchi as CEO, a deep-dive into how bank stocks fared after top boss changes - Yes, RBL, IndusInd, HDFC Bank",
+     "link": "https://www.livemint.com/market/stock-market-news/as-hdfc-bank-names-anup-bagchi-as-ceo-heres-how-bank-stocks-fared-after-past-ceo-changes-yes-bank-rbl-to-indusind-11790942528070.html",
+     "source": "Mint Markets",
+     "time": "2026-10-02T12:47:12+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T12:47:12+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t863fae2a",
+   "title": "School protests send shivers down French government's spine",
+   "category": "Other",
+   "items": [
+    {
+     "id": "d2336924ee27",
+     "title": "School protests send shivers down French government's spine",
+     "link": "https://www.bbc.co.uk/news/articles/c69wzjjxex8po?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": "2026-10-02T12:43:02+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T12:43:02+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tf66d201d",
+   "title": "Experts' view: Why would bears cheer Nifty's breakdown below 22,000?",
+   "category": "Other",
+   "items": [
+    {
+     "id": "649fffc0393e",
+     "title": "Experts' view: Why would bears cheer Nifty's breakdown below 22,000?",
+     "link": "https://www.livemint.com/market/stock-market-news/experts-view-why-would-bears-cheer-niftys-breakdown-below-22000-11790938909647.html",
+     "source": "Mint Markets",
+     "time": "2026-10-02T12:36:14+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T12:36:14+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tf71754d2",
+   "title": "Alaska LNG Hinges on How Much Asian Buyers Will Pay for Energy Security",
+   "category": "Other",
+   "items": [
+    {
+     "id": "9e20a6889f6c",
+     "title": "Alaska LNG Hinges on How Much Asian Buyers Will Pay for Energy Security",
+     "link": "https://oilprice.com/Latest-Energy-News/World-News/Alaska-LNG-Hinges-on-How-Much-Asian-Buyers-Will-Pay-for-Energy-Security.html",
+     "source": "OilPrice.com",
+     "time": "2026-10-02T12:30:00+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T12:30:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t07023b16",
+   "title": "E.U. weighs releasing 100 million barrels of diesel and crude under U.S. pressure - qz.com",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "b4d9c3aadd3b",
+     "title": "E.U. weighs releasing 100 million barrels of diesel and crude under U.S. pressure - qz.com",
+     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZGE2Rmo2S015eTBQMm5ELWpfWUZCV0lDUzJhVWVxdlZUT0FhZUFDMTc3UjJCZFdGMS01UGthTXFCbkNwNVNKbEM0empQaVhLaHkzcmlmdnhCbkFKX0k1ZEItVmNCd0VpMVkyZkdRTFlGUEExTjNLX2Zma3ZDTmlkbXdn?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-02T12:06:18+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T12:06:18+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t08fe7c12",
+   "title": "Dow Jones| Nasdaq | US Stock Market Today | Live: Nasdaq rises 1% after softer jobs data eases rate hike bets",
+   "category": "Other",
+   "items": [
+    {
+     "id": "78a17d8fc50e",
+     "title": "Dow Jones| Nasdaq | US Stock Market Today | Live: Nasdaq rises 1% after softer jobs data eases rate hike bets",
+     "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/dow-jones-us-stock-market-live-updates-nasdaq-sp-500-iran-israel-war-hormuz-talks-brent-crude-oil-inflation-treasury-bond-yields-fed-rate-hike-earnings-forecast-jobs-nike-nvidia-amd-moderna-ai-chip-stock-price-news-2-october-2026/liveblog/134639271.cms",
+     "source": "Economic Times Markets",
+     "time": "2026-10-02T12:05:57+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T12:05:57+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t99097c7f",
+   "title": "RBI MPC may hike repo rate next week: Experts share the equity-debt strategy investors should consider",
+   "category": "RBI",
+   "items": [
+    {
+     "id": "2d37228ccaf4",
+     "title": "RBI MPC may hike repo rate next week: Experts share the equity-debt strategy investors should consider",
+     "link": "https://www.livemint.com/market/stock-market-news/rbi-mpc-may-hike-repo-rate-next-week-experts-share-the-equity-debt-strategy-investors-should-consider-11790937827085.html",
+     "source": "Mint Markets",
+     "time": "2026-10-02T11:59:20+00:00",
+     "category": "RBI",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T11:59:20+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t60808946",
+   "title": "Govt absorbing up to Rs 2,700 per urea bag as global costs rise to Rs 3,000: Nirmala Sitharaman",
+   "category": "Other",
+   "items": [
+    {
+     "id": "ef6ef8abf6c3",
+     "title": "Govt absorbing up to Rs 2,700 per urea bag as global costs rise to Rs 3,000: Nirmala Sitharaman",
+     "link": "https://economictimes.indiatimes.com/news/economy/agriculture/govt-absorbing-up-to-rs-2700-per-urea-bag-as-global-costs-rise-to-rs-3000-nirmala-sitharaman/articleshow/134638715.cms",
+     "source": "Economic Times Economy",
+     "time": "2026-10-02T11:55:40+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T11:55:40+00:00",
+   "effect": ""
+  },
+  {
+   "id": "ta27ce17a",
+   "title": "Who is the 'hero' Indian pilot who was stabbed on Israel-bound flight?",
+   "category": "Other",
+   "items": [
+    {
+     "id": "4db815738c2b",
+     "title": "Who is the 'hero' Indian pilot who was stabbed on Israel-bound flight?",
+     "link": "https://www.bbc.co.uk/news/articles/cje3r3z7g0zzo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": "2026-10-02T11:52:04+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T11:52:04+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t006e36d2",
+   "title": "Weakest monsoon since 2015 prompts ICRA to cut FY27 farm growth forecast",
+   "category": "Other",
+   "items": [
+    {
+     "id": "cc1fd36c1eca",
+     "title": "Weakest monsoon since 2015 prompts ICRA to cut FY27 farm growth forecast",
+     "link": "https://economictimes.indiatimes.com/news/economy/agriculture/weakest-monsoon-since-2015-prompts-icra-to-cut-fy27-farm-growth-forecast/articleshow/134638319.cms",
+     "source": "Economic Times Economy",
+     "time": "2026-10-02T11:37:47+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-02T11:37:47+00:00",
    "effect": ""
   }
  ],
