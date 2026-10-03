@@ -28,6 +28,16 @@ class T(unittest.TestCase):
         self.assertIsNone(pw.summarize([]))
         self.assertEqual(pw.parse([{"attributes": {"portname": "X"}}]), [])
 
+    def test_stress_and_index(self):
+        mk = lambda a, b: [{"date": f"2026-01-{i:03d}", "total": a if i < 97 else b, "tanker": 0} for i in range(104)]
+        self.assertEqual(pw.stress(mk(100, 50))[-1][1], 50.0)      # halved traffic -> 50
+        self.assertEqual(pw.stress(mk(100, 150))[-1][1], 0.0)      # above usual never goes negative
+        idx = pw.build_index({"A": mk(100, 50), "B": mk(100, 50), "C": mk(100, 100)})
+        self.assertEqual(idx["latest"], 33)
+        self.assertEqual(idx["band"], "Strained")
+        self.assertIsNone(pw.build_index({"A": mk(100, 50), "B": mk(100, 50)}))  # needs 3 routes
+        self.assertEqual(pw.band(9.9), "Calm")
+
 
 if __name__ == "__main__":
     unittest.main()
