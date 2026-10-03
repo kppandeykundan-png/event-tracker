@@ -1,0 +1,5 @@
+{
+  "_help": "Add one object per trading day to daily (newest last), amounts in Rs crore, from the NSE FII/DII report. Example: {\"date\":\"2026-10-01\",\"fii_net\":-1234.5,\"dii_net\":2345.6}. Optional monthly mutual fund data goes in monthly_mf, example: {\"month\":\"2026-09\",\"equity_net_cr\":1000,\"sip_cr\":2000}.",
+  "daily": [],
+  "monthly_mf": []
+}

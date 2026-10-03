@@ -1,0 +1,10 @@
+[
+  {"name": "News: FII DII flows", "url": "https://news.google.com/rss/search?q=FII+DII+flows+India+when:2d&hl=en-IN&gl=IN&ceid=IN:en"},
+  {"name": "News: RBI policy", "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+when:2d&hl=en-IN&gl=IN&ceid=IN:en"},
+  {"name": "News: US Fed", "url": "https://news.google.com/rss/search?q=Federal+Reserve+interest+rate+when:2d&hl=en-IN&gl=IN&ceid=IN:en"},
+  {"name": "News: Rupee", "url": "https://news.google.com/rss/search?q=rupee+dollar+forex+when:2d&hl=en-IN&gl=IN&ceid=IN:en"},
+  {"name": "News: Crude oil", "url": "https://news.google.com/rss/search?q=crude+oil+Brent+OPEC+when:2d&hl=en-IN&gl=IN&ceid=IN:en"},
+  {"name": "News: Shipping", "url": "https://news.google.com/rss/search?q=Hormuz+OR+%22Red+Sea%22+shipping+tanker+when:2d&hl=en-IN&gl=IN&ceid=IN:en"},
+  {"name": "News: India elections", "url": "https://news.google.com/rss/search?q=India+election+market+impact+when:3d&hl=en-IN&gl=IN&ceid=IN:en"},
+  {"name": "News: India economy", "url": "https://news.google.com/rss/search?q=India+inflation+GDP+Sensex+Nifty+when:2d&hl=en-IN&gl=IN&ceid=IN:en"}
+]

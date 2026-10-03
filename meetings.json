@@ -1,0 +1,8 @@
+[
+  {"body": "RBI", "name": "Monetary Policy Committee", "start": "2026-10-05", "end": "2026-10-07", "decision": "2026-10-07"},
+  {"body": "RBI", "name": "Monetary Policy Committee", "start": "2026-12-02", "end": "2026-12-04", "decision": "2026-12-04"},
+  {"body": "RBI", "name": "Monetary Policy Committee", "start": "2027-02-03", "end": "2027-02-05", "decision": "2027-02-05"},
+  {"body": "Fed", "name": "FOMC minutes (September meeting)", "start": "2026-10-07", "end": "2026-10-07", "decision": "2026-10-07"},
+  {"body": "Fed", "name": "FOMC meeting", "start": "2026-10-27", "end": "2026-10-28", "decision": "2026-10-28"},
+  {"body": "Fed", "name": "FOMC meeting", "start": "2026-12-08", "end": "2026-12-09", "decision": "2026-12-09"}
+]
