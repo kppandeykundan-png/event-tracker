@@ -1,6 +1,96 @@
 {
- "updated": "2026-10-03T08:58:32.213904+00:00",
+ "updated": "2026-10-03T09:13:39.707667+00:00",
  "threads": [
+  {
+   "id": "tacf23335",
+   "title": "Nayara Energy hikes petrol by ₹5, diesel by ₹3",
+   "category": "Other",
+   "items": [
+    {
+     "id": "4749ec46925a",
+     "title": "Nayara Energy hikes petrol by ₹5, diesel by ₹3",
+     "link": "https://www.thehindu.com/business/Industry/nayara-energy-hikes-petrol-by-5-diesel-by-3/article71540153.ece",
+     "source": "The Hindu Business",
+     "time": "2026-10-03T09:01:18+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T09:01:18+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t15857bfa",
+   "title": "RBI backs blockchain technology, remains cautious on crypto: Guv Malhotra",
+   "category": "RBI",
+   "items": [
+    {
+     "id": "6d08f5ee1934",
+     "title": "RBI backs blockchain technology, remains cautious on crypto: Guv Malhotra",
+     "link": "https://www.business-standard.com/economy/news/rbi-backs-blockchain-technology-remains-cautious-on-crypto-guv-malhotra-126100300396_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-03T08:54:02+00:00",
+     "category": "RBI",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T08:54:02+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t95d2600b",
+   "title": "India should tax capital income, not wealth or inheritance: Economist Daniel Waldenstrom",
+   "category": "Other",
+   "items": [
+    {
+     "id": "c8420533dd59",
+     "title": "India should tax capital income, not wealth or inheritance: Economist Daniel Waldenstrom",
+     "link": "https://economictimes.indiatimes.com/news/economy/policy/india-should-tax-capital-income-not-wealth-or-inheritance-economist-daniel-waldenstrom/articleshow/134655613.cms",
+     "source": "Economic Times Economy",
+     "time": "2026-10-03T08:51:38+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T08:51:38+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t8c9f3dac",
+   "title": "G20 ministers discuss curbing impact of govt-backed excess manufacturing capacities: Piyush Goyal",
+   "category": "Other",
+   "items": [
+    {
+     "id": "ac99ce16d510",
+     "title": "G20 ministers discuss curbing impact of govt-backed excess manufacturing capacities: Piyush Goyal",
+     "link": "https://economictimes.indiatimes.com/news/economy/policy/g20-ministers-discuss-curbing-impact-of-govt-backed-excess-manufacturing-capacities-piyush-goyal/articleshow/134655474.cms",
+     "source": "Economic Times Economy",
+     "time": "2026-10-03T08:49:41+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T08:49:41+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t3830aecc",
+   "title": "Economic resilience cannot mean global insulation; domestic production \"may cost more\": Principal Secy to PM",
+   "category": "Other",
+   "items": [
+    {
+     "id": "f69a9dc50286",
+     "title": "Economic resilience cannot mean global insulation; domestic production \"may cost more\": Principal Secy to PM",
+     "link": "https://economictimes.indiatimes.com/news/economy/policy/economic-resilience-cannot-mean-global-insulation-domestic-production-may-cost-more-principal-secy-to-pm/articleshow/134655468.cms",
+     "source": "Economic Times Economy",
+     "time": "2026-10-03T08:46:26+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T08:46:26+00:00",
+   "effect": ""
+  },
   {
    "id": "tb115c884",
    "title": "Cube Highways Trust secures Rs.1,150 crore through AAA-rated NCDs",
@@ -35,6 +125,24 @@
     }
    ],
    "updated": "2026-10-03T08:38:16+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t3b3cee71",
+   "title": "Yemen’s army claims over 1,500 Houthi casualties in past 24 hours",
+   "category": "Other",
+   "items": [
+    {
+     "id": "ea9301ae812b",
+     "title": "Yemen’s army claims over 1,500 Houthi casualties in past 24 hours",
+     "link": "https://www.aljazeera.com/news/2026/10/3/over-1500-houthi-casualties-in-past-24-hours-yemeni-army-says?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T08:36:17+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T08:36:17+00:00",
    "effect": ""
   },
   {
@@ -135,6 +243,24 @@
     {
      "id": "7f6422fbd52b",
      "title": "India beat arch-rivals Pakistan to win Asian Games T20 cricket gold",
+     "link": "https://www.aljazeera.com/sports/2026/10/3/india-beat-arch-rivals-pakistan-to-win-asian-games-t20-cricket-gold?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T08:18:40+00:00",
+     "category": "Commodity",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T08:18:40+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t57a06a39",
+   "title": "India beat archrivals Pakistan to win Asian Games T20 cricket gold",
+   "category": "Commodity",
+   "items": [
+    {
+     "id": "b4f1a189f789",
+     "title": "India beat archrivals Pakistan to win Asian Games T20 cricket gold",
      "link": "https://www.aljazeera.com/sports/2026/10/3/india-beat-arch-rivals-pakistan-to-win-asian-games-t20-cricket-gold?traffic_source=rss",
      "source": "Al Jazeera",
      "time": "2026-10-03T08:18:40+00:00",
@@ -409,6 +535,24 @@
      "source": "Al Jazeera",
      "time": "2026-10-03T06:37:31+00:00",
      "category": "Commodity",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T06:37:31+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t4d3ab05e",
+   "title": "LIVE: India beat Pakistan in Asian Games – medal ceremony delayed",
+   "category": "Other",
+   "items": [
+    {
+     "id": "ac147ca3ed1d",
+     "title": "LIVE: India beat Pakistan in Asian Games – medal ceremony delayed",
+     "link": "https://www.aljazeera.com/sports/liveblog/2026/10/3/india-vs-pakistan-live-asian-games-cricket-final?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T06:37:31+00:00",
+     "category": "Other",
      "effect": ""
     }
    ],
