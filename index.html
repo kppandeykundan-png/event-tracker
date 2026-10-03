@@ -67,20 +67,45 @@ footer{color:var(--mute);font-size:13px;padding:10px 0 48px}
 .idx{grid-column:1/-1}@media(min-width:560px){.tile.idx{grid-column:span 2}}
 .ev-l{stroke:var(--mute);stroke-dasharray:2 3}.ev-t{fill:var(--mute);font-size:8.5px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.hero{padding:16px 0 12px}h1{font-size:clamp(26px,4vw,34px);margin:0}.rowh{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center}.tag{margin:4px 0 0;font-size:15px}
+.tk{background:#12485c;color:#eaf3f6;display:flex;overflow-x:auto;white-space:nowrap}.tk button{flex:none;font:inherit;font-size:14px;background:none;border:0;border-right:1px solid rgba(255,255,255,.15);color:inherit;padding:8px 16px;cursor:pointer}
+.tk i{font-style:normal;color:#cfe1e8}.tk i.bad{color:#ff9c94}.tk i.good{color:#7fe3d6}.tk button:hover{background:rgba(255,255,255,.08)}
+.nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:4px;overflow-x:auto;padding:6px 8px}
+.nb{position:relative;flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:78px;padding:6px 10px;border:0;background:none;color:var(--ink);font:inherit;font-size:12.5px;font-weight:500;cursor:pointer;border-radius:10px}
+.nb svg{width:40px;height:40px;padding:9px;border-radius:50%;background:var(--tint);color:var(--sea)}.nb:hover svg{background:var(--sea);color:var(--card)}
+.nb em{position:absolute;top:2px;right:14px;font-style:normal;font-size:11px;font-weight:700;background:var(--bad);color:#fff;border-radius:99px;padding:0 6px}
+.cols{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:22px;margin-top:18px}@media(max-width:860px){.cols{grid-template-columns:1fr}}
+.lede{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--sea);border-radius:12px;padding:16px 20px}.lede h2{font:700 25px/1.25 "Fraunces",Georgia,serif;margin:6px 0}.lede p{margin:6px 0}
+.ai{display:inline-block;background:var(--gold);color:#fff;font-size:11px;font-weight:700;border-radius:4px;padding:0 6px;margin-right:4px}
+.more,.lnk{font:inherit;font-size:14px;font-weight:700;color:var(--sea);background:none;border:0;padding:4px 0;cursor:pointer;text-align:left}.more{border:1px solid var(--sea);border-radius:8px;padding:6px 14px;margin-top:6px}
+h2.sec{font:600 20px "Fraunces",Georgia,serif;margin:24px 0 4px;border-bottom:2px solid var(--ink);padding-bottom:6px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}h2.sec small{font:400 13px "DM Sans",sans-serif;color:var(--mute);flex:1}
+.nr{padding:12px 0 12px 14px;border-bottom:1px solid var(--line);border-left:3px solid var(--c,var(--line))}.nr .hd{display:block;font-weight:700;font-size:17px;line-height:1.35;color:var(--ink);text-decoration:none;margin:2px 0}.nr .hd:hover{text-decoration:underline}
+.take{margin:4px 0 0;font-size:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:14px}.card h3{margin:0 0 8px;font:600 17px "Fraunces",Georgia,serif}
+.gauge b{font:700 44px/1 "Fraunces",Georgia,serif}.gauge span{color:var(--mute);margin-left:6px}.bar{height:8px;border-radius:99px;background:var(--tint);margin:8px 0}.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--sea),var(--gold) 55%,var(--bad))}
+.mini{display:grid;grid-template-columns:1fr auto;gap:0 8px;width:100%;font:inherit;text-align:left;background:none;color:var(--ink);border:0;border-top:1px solid var(--line);padding:9px 0;cursor:pointer}.mini:hover{background:var(--tint)}.mini small{display:block;color:var(--mute)}.mini i{font-style:normal;font-size:13px;font-weight:700;color:var(--mute)}.mini i.bad{color:var(--bad)}.mini svg{grid-column:1/-1;height:26px}
+.sev{display:block;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+dialog{border:0;border-radius:14px;padding:0;width:min(980px,96vw);max-height:88vh;background:var(--bg);color:var(--ink)}dialog::backdrop{background:rgba(5,15,25,.6)}
+.dh{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;background:var(--card);border-bottom:1px solid var(--line);padding:12px 18px;font:600 20px "Fraunces",Georgia,serif}.dh svg{width:24px;height:24px;color:var(--sea)}.dh b{flex:1;display:flex;gap:10px;align-items:center}
+#dx{font:inherit;font-size:18px;background:none;border:1px solid var(--line);border-radius:50%;width:36px;height:36px;color:var(--ink);cursor:pointer}.dbd{padding:16px 18px 24px;overflow:auto;max-height:calc(88vh - 62px)}
+.adm{background:#fff7e0;color:#4a3500;border:1px solid var(--gold);border-radius:8px;padding:8px 12px;margin-top:14px;font-size:14px}
 </style>
 </head>
 <body>
 <header class="hero"><div class="wrap">
-  <h1 id="brand"></h1><p class="tag" id="tag"></p>
-  <div class="row"><span class="pill"><i></i><span id="stamp">Loading the latest…</span></span><a id="cta" class="cta" hidden></a></div>
-  <div class="glance" id="glance"></div>
+  <div class="rowh"><h1 id="brand"></h1><div class="row"><span class="pill"><i></i><span id="stamp">Loading the latest…</span></span><a id="cta" class="cta" hidden></a></div></div>
+  <p class="tag" id="tag"></p>
 </div></header>
+<div class="tk" id="tk"></div>
+<nav class="nav" id="nav" aria-label="Sections"></nav>
 <main class="wrap">
-  <div class="tools"><button id="exp">Expand all</button><button id="col">Collapse all</button></div>
-  <div id="panels"></div>
-  <footer>Ship transit data: UN Global Platform and IMF PortWatch (portwatch.imf.org). News links go to their publishers. Briefs are written by AI from public headlines and official data, for information only. Nothing here is investment advice or a recommendation to buy, sell or hold any security.</footer>
+  <div id="adm"></div>
+  <div class="cols"><div id="main"></div><aside id="side"></aside></div>
+  <footer>Ship transit data: UN Global Platform and IMF PortWatch (portwatch.imf.org). News links go to their publishers. Briefs and story notes marked AI are written by AI from public headlines and official data, for information only. Nothing here is investment advice or a recommendation to buy, sell or hold any security.</footer>
 </main>
+<dialog id="dlg"><div class="dh"><b id="dt"></b><button id="dx" aria-label="Close">✕</button></div><div class="dbd" id="db"></div></dialog>
 <script>
+
 let SITE={name:"Market Pulse",tagline:"Oil routes, central banks and company research, explained in plain English.",subscribe:"",indexName:"Sea-Lane Stress Index"}; // edit site.json instead
 const DATA_BASE=""; // set to your new host URL when you move, e.g. "https://data.example.com/"
 const $=id=>document.getElementById(id);
@@ -140,9 +165,9 @@ function buildRoutes(){const ks=Object.keys(R).filter(k=>pw&&pw.chokepoints[k]);
   lead=b.change_pct==null?"":`Biggest shift: ${R[big].n} is seeing ${b.avg7_total} ships a day, ${Math.abs(b.change_pct)}% ${b.change_pct<0?"below":"above"} its usual pace.`,
   last=ks.map(k=>pw.chokepoints[k].latest_date).sort().pop();
   return{n:ks.length,html:`<p class="lead">${esc(lead)}</p><div class="routes">${indexCard()}${ks.map(k=>{const c=pw.chokepoints[k],t=trend(c);
-  return`<article class="route"><h3>${R[k].n}</h3><p class="why">${R[k].w}</p><div class="big">${c.avg7_total}<span> ships a day</span></div><div class="tr ${t.k}">${t.t}</div>${chart(k,R[k].n,c.series,"total",c.baseline_total,"ships")}<p class="foot">${c.avg7_tanker} of them tankers. Latest data: ${fd(c.latest_date)}.</p></article>`}).join("")}</div>
+  return`<article class="route" id="r-${k}"><h3>${R[k].n}</h3><p class="why">${R[k].w}</p><div class="big">${c.avg7_total}<span> ships a day</span></div><div class="tr ${t.k}">${t.t}</div>${chart(k,R[k].n,c.series,"total",c.baseline_total,"ships")}<p class="foot">${c.avg7_tanker} of them tankers. Latest data: ${fd(c.latest_date)}.</p></article>`}).join("")}</div>
   <p class="src">Each line shows ships passing per day. The gold line, "usual", is the average of the 90 days before the latest week. Latest data: ${fd(last)}. Source: UN Global Platform; IMF PortWatch (portwatch.imf.org).</p>${shareLinks()}`}}
-function buildMovers(){const cut=Date.now()-48*36e5,all=(data.threads||[]).filter(t=>t.impact>=3&&new Date(t.updated)>cut);
+function buildMovers(){const cut=Date.now()-48*36e5,all0=(data.threads||[]).filter(t=>t.impact>=3&&new Date(t.updated)>cut),all=all0.length?all0:(data.threads||[]).filter(t=>t.category!=="Other"&&new Date(t.updated)>Date.now()-72*36e5);
   if(!all.length)return{n:0,html:'<p class="empty">No big market stories right now. New ones appear here as they break.</p>'};
   const cats=["All",...new Set(all.map(t=>t.category))],list=all.filter(t=>cat==="All"||t.category===cat).sort((a,b)=>b.impact-a.impact||new Date(b.updated)-new Date(a.updated)).slice(0,12);
   return{n:all.length,html:`<div class="cats">${cats.map(c=>`<button aria-pressed="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join("")}</div>`+list.map(t=>`<details class="story" style="--c:var(${COL[t.category]||"--mute"})"><summary><span class="cat">${esc(t.category)}</span>${t.impact>=4?'<span class="hi">High impact</span>':""}<b>${esc(t.title)}</b><span class="meta">${t.items.length} update${t.items.length>1?"s":""}, latest ${ago(t.updated)}</span>${t.effect?`<span class="fx">Why it matters: ${esc(t.effect)}</span>`:""}${chips(t)}</summary><ul>${t.items.map(i=>`<li><a href="${esc(safe(i.link))}" target="_blank" rel="noopener">${esc(i.title)}</a><div class="meta">${esc(i.source)}, ${ago(i.time)}</div></li>`).join("")}</ul></details>`).join("")}}
@@ -150,22 +175,35 @@ function buildCal(){const u=data.upcoming||[];if(!u.length)return null;
   return{n:u.length,html:`<div class="grid">${u.map(e=>`<div class="ev ${e.impact==="High"?"hot":""}"><b>${esc(e.title)}</b><span class="meta">${esc(e.country)}, ${new Date(e.time).toLocaleString([],{weekday:"short",hour:"2-digit",minute:"2-digit"})}</span><div class="cd">${until(e.time)}</div>${e.forecast||e.previous?`<div class="meta">Forecast ${esc(e.forecast||"-")}, previous ${esc(e.previous||"-")}</div>`:""}</div>`).join("")}</div>`}}
 function buildLive(){if(!ais)return null;const ok=Object.keys(ais.areas).filter(n=>{const l=latest(ais.areas[n]);return l.vessels>=10&&l.typed_pct>=60});if(!ok.length)return null;
   return{n:ok.length,html:`<div class="grid">${ok.map(n=>{const l=latest(ais.areas[n]);return`<div class="ev"><b>${esc(n)}</b><div class="big">${l.tankers}<span> tankers today so far</span></div><div class="meta">${l.vessels} vessels seen, ${l.capacity_mbbl}M barrels of tanker capacity</div></div>`}).join("")}</div><p class="src">Counts come from a volunteer ship-tracking network and cover only the ships it hears. Tanker capacity is ship size, not cargo.</p>`}}
-const PANELS=[
- {id:"brief",icon:"doc",title:"Market Brief",blurb:"Your morning read: what happened and what to watch",open:1,build:buildBrief},
- {id:"research",icon:"lens",title:"Research",blurb:"Independent company analysis and deep dives",open:1,build:buildResearch},
- {id:"routes",icon:"ship",title:"Oil & Trade Routes",blurb:"How many ships pass the world's key sea lanes, and why it moves oil, freight and inflation",open:1,build:buildRoutes},
- {id:"movers",icon:"bolt",title:"Market Movers",blurb:"The stories most likely to move markets right now",open:1,build:buildMovers},
- {id:"cal",icon:"cal",title:"Economic Calendar",blurb:"Central bank decisions and data releases coming up",open:0,build:buildCal},
- {id:"live",icon:"radar",title:"Live Vessel Traffic",blurb:"Tankers and ships spotted right now at busy sea lanes",open:0,build:buildLive}];
-function render(){$("glance").innerHTML=glance();
-  $("panels").innerHTML=PANELS.map(p=>{const r=p.build();if(!r)return"";
-  return`<details class="panel" id="p-${p.id}" data-id="${p.id}" ${open[p.id]??p.open?"open":""}><summary><span class="ic">${I[p.icon]}</span><span class="pt"><b>${p.title}</b><small>${p.blurb}</small></span><span class="badge">${r.n}</span><span class="chev">${chev}</span></summary><div class="pb">${r.html}</div></details>`}).join("")}
-function setAll(v){PANELS.forEach(p=>open[p.id]=v);try{localStorage.setItem("open",JSON.stringify(open))}catch{}render()}
-$("panels").addEventListener("toggle",e=>{const d=e.target;if(d.dataset&&d.dataset.id){open[d.dataset.id]=d.open;try{localStorage.setItem("open",JSON.stringify(open))}catch{}}},true);
-$("panels").addEventListener("click",e=>{const b=e.target.closest(".cats button");if(b){cat=b.dataset.c;render()}});
-$("panels").addEventListener("pointermove",hover);$("panels").addEventListener("pointerout",unhover);
-$("glance").addEventListener("click",()=>{open.routes=true;render()});
-$("exp").onclick=()=>setAll(true);$("col").onclick=()=>setAll(false);
+
+const line=v=>{if(v.length<2)return"";const m=Math.max(...v,1);return`<svg viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true"><polyline points="${v.map((y,i)=>`${(i*100/(v.length-1)).toFixed(1)},${(24-y/m*22).toFixed(1)}`).join(" ")}" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--sea)"/></svg>`};
+const NAV=[["brief","doc","AI Brief",buildBrief],["news","bolt","Market News",buildMovers],["routes","ship","Trade Routes",buildRoutes],["research","lens","Research",buildResearch],["cal","cal","Calendar",buildCal],["live","radar","Vessels",buildLive]];
+function openDlg(k,f){const n=NAV.find(x=>x[0]===k);if(!n)return;const r=n[3]()||{html:'<p class="empty">Nothing here yet. It fills in automatically as new data arrives.</p>'};
+  $("dt").innerHTML=I[n[1]]+n[2];$("db").innerHTML=r.html;if(!$("dlg").open)$("dlg").showModal();const el=f&&document.getElementById(f);if(el)el.scrollIntoView();else $("db").scrollTop=0}
+const navHtml=()=>NAV.map(([k,i,t,b])=>{const r=b();return`<button class="nb" data-k="${k}">${I[i]}<span>${t}</span>${r&&r.n?`<em>${r.n}</em>`:""}</button>`}).join("");
+function ticker(){const t=[];if(pw&&pw.index){const x=pw.index;t.push(`<button data-k="routes"><b>${esc(SITE.indexName)}</b> ${x.latest} <i class="${x.latest>=25?"bad":""}">${x.band}</i></button>`)}
+  if(pw)Object.keys(R).filter(k=>pw.chokepoints[k]).forEach(k=>{const c=pw.chokepoints[k],r=trend(c);t.push(`<button data-k="routes" data-f="r-${k}"><b>${R[k].s}</b> ${c.avg7_total}/day <i class="${r.k}">${r.t}</i></button>`)});
+  const nx=(data.upcoming||[])[0];if(nx)t.push(`<button data-k="cal"><b>Next</b> ${esc(nx.title)} <i>${until(nx.time)}</i></button>`);return t.join("")}
+function lede(){const a=arts[0];
+  if(!a)return`<article class="lede"><span class="ai">AI</span><b>AI market brief</b><h2>Today's brief is on its way</h2><p>Every weekday morning (8:00 IST) AI reads the day's top stories and the official shipping data, then writes a short brief with what happened and what to watch.</p></article>`;
+  const p=a.body.split(/\n\s*\n/);return`<article class="lede"><span class="ai">AI written</span><span class="meta">${esc(a.kind)}, ${fd(a.date)}</span><h2>${esc(a.title)}</h2><p>${esc(p[0])}</p><p>${esc(p[1]||"")}</p><button class="more" data-k="brief">Read the full brief</button></article>`}
+function feed(){const cut=Date.now()-48*36e5;let l=(data.threads||[]).filter(t=>t.impact>=3&&new Date(t.updated)>cut);
+  if(!l.length)l=(data.threads||[]).filter(t=>t.category!=="Other"&&new Date(t.updated)>Date.now()-72*36e5);
+  l=l.sort((a,b)=>(b.impact||0)-(a.impact||0)||new Date(b.updated)-new Date(a.updated)).slice(0,10);
+  if(!l.length)return'<p class="empty">Stories appear here as they break.</p>';
+  return l.map(t=>`<article class="nr" style="--c:var(${COL[t.category]||"--mute"})"><div><span class="cat">${esc(t.category)}</span>${t.impact>=4?'<span class="hi">High impact</span>':""} <span class="meta">${ago(t.updated)}, ${esc(t.items[0].source)}</span></div><a class="hd" href="${esc(safe(t.items[0].link))}" target="_blank" rel="noopener">${esc(t.title)}</a>${t.effect?`<p class="take"><span class="ai">AI</span>${esc(t.effect)}</p>`:""}${chips(t)}${t.items.length>1?` <button class="lnk" data-k="news">${t.items.length} updates</button>`:""}</article>`).join("")}
+function side(){let h="";const x=pw&&pw.index;
+  if(x)h+=`<section class="card"><h3>${esc(SITE.indexName)}</h3><div class="gauge"><b>${x.latest}</b><span>out of 100, ${x.band}</span></div><div class="bar"><i style="width:${x.latest}%"></i></div><p class="meta">${x.change_7d>=0?"▲ up":"▼ down"} ${Math.abs(x.change_7d)} points this week. 0 means normal shipping traffic.</p></section>`;
+  if(pw)h+=`<section class="card"><h3>Oil &amp; trade routes</h3>${Object.keys(R).filter(k=>pw.chokepoints[k]).map(k=>{const c=pw.chokepoints[k],r=trend(c);return`<button class="mini" data-k="routes" data-f="r-${k}"><span><b>${R[k].s}</b><small>${c.avg7_total} ships a day</small></span><i class="${r.k}">${r.t}</i>${line(c.series.slice(-60).map(s=>s.total))}</button>`}).join("")}<button class="lnk" data-k="routes">All charts and explainers</button></section>`;
+  const u=(data.upcoming||[]).slice(0,4);if(u.length)h+=`<section class="card"><h3>Coming up</h3>${u.map(e=>`<span class="sev"><b>${esc(e.title)}</b><br><span class="meta">${esc(e.country)}</span> <span class="cd">${until(e.time)}</span></span>`).join("")}<button class="lnk" data-k="cal">Full calendar</button></section>`;
+  h+=`<section class="card"><h3>Research</h3>${posts.length?posts.slice(0,3).map(p=>`<a class="sev" href="research.html?p=${encodeURIComponent(p.slug)}"><b>${esc(p.title)}</b><br><span class="meta">${p.date?fd(p.date):""}</span></a>`).join("")+'<button class="lnk" data-k="research">All research</button>':'<p class="meta">New research notes will appear here.</p>'}</section>`;return h}
+function admin(){if(!/admin=1/.test(location.search))return"";const t=data.threads||[];
+  return`<div class="adm"><b>Owner view.</b> News updated ${data.updated?ago(data.updated):"never"}. Stories ${t.length}, AI-scored ${t.filter(x=>x.impact!=null).length}. AI articles ${arts.length}. Shipping data ${pw?ago(pw.updated):"missing"}. Research notes ${posts.length}. ${t.some(x=>x.impact!=null)?"":"No AI scores yet: check the ANTHROPIC_API_KEY secret, delete events.json and cache.json, then run Update events (AI). "}${arts.length?"":"No AI brief yet: run the AI market brief workflow. "}${data.updated&&Date.now()-new Date(data.updated)>36e5?"News looks stale (over 1 hour): check the Actions tab for failed runs.":""}</div>`}
+function render(){$("tk").innerHTML=ticker();$("nav").innerHTML=navHtml();$("adm").innerHTML=admin();
+  $("main").innerHTML=lede()+`<h2 class="sec">Market news <small>Stories AI picked as most likely to move markets</small><button class="lnk" data-k="news">View all</button></h2>`+feed();$("side").innerHTML=side()}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(b){openDlg(b.dataset.k,b.dataset.f);return}
+  const c=e.target.closest(".cats button");if(c){cat=c.dataset.c;openDlg("news");return}if(e.target===$("dlg")||e.target.closest("#dx"))$("dlg").close()});
+document.addEventListener("pointermove",hover);document.addEventListener("pointerout",unhover);
 function applySite(){$("brand").textContent=SITE.name;$("tag").textContent=SITE.tagline;document.title=SITE.name;const a=$("cta");a.hidden=!SITE.subscribe;if(SITE.subscribe){a.href=safe(SITE.subscribe);a.textContent="Get research updates"}}
 applySite();
 async function jget(p){try{const r=await fetch(DATA_BASE+p+"?t="+Date.now());return r.ok?await r.json():null}catch{return null}}
