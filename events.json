@@ -1,6 +1,42 @@
 {
- "updated": "2026-10-03T09:29:09.677086+00:00",
+ "updated": "2026-10-03T09:43:22.961406+00:00",
  "threads": [
+  {
+   "id": "te306c4db",
+   "title": "G7 to release 100 million barrels of oil and diesel, will it curb prices?",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "58be144fcf1c",
+     "title": "G7 to release 100 million barrels of oil and diesel, will it curb prices?",
+     "link": "https://www.aljazeera.com/news/2026/10/3/g7-to-release-100-million-barrels-of-oil-and-diesel-will-it-curb-prices?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T09:27:38+00:00",
+     "category": "Crude",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T09:27:38+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tf9808f1e",
+   "title": "Who is the mystery co-pilot behind the Flydubai attack?",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "f540fc6ad740",
+     "title": "Who is the mystery co-pilot behind the Flydubai attack?",
+     "link": "https://www.aljazeera.com/news/2026/10/3/who-is-the-mystery-co-pilot-behind-the-flydubai-attack?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T09:25:31+00:00",
+     "category": "Conflict",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T09:25:31+00:00",
+   "effect": ""
+  },
   {
    "id": "tacf23335",
    "title": "Nayara Energy hikes petrol by ₹5, diesel by ₹3",
@@ -308,6 +344,24 @@
    "effect": ""
   },
   {
+   "id": "tf37ceb11",
+   "title": "No handshakes and a delayed ceremony as India beat Pakistan at Asian Games",
+   "category": "Other",
+   "items": [
+    {
+     "id": "5704757ebc4f",
+     "title": "No handshakes and a delayed ceremony as India beat Pakistan at Asian Games",
+     "link": "https://www.aljazeera.com/sports/2026/10/3/india-beat-arch-rivals-pakistan-to-win-asian-games-t20-cricket-gold?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T08:18:40+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T08:18:40+00:00",
+   "effect": ""
+  },
+  {
    "id": "t3e8dc3bd",
    "title": "Floods sweep cars through streets after intense rain in Spain",
    "category": "Other",
@@ -603,6 +657,24 @@
     {
      "id": "ac147ca3ed1d",
      "title": "LIVE: India beat Pakistan in Asian Games – medal ceremony delayed",
+     "link": "https://www.aljazeera.com/sports/liveblog/2026/10/3/india-vs-pakistan-live-asian-games-cricket-final?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T06:37:31+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T06:37:31+00:00",
+   "effect": ""
+  },
+  {
+   "id": "td1ee5ec1",
+   "title": "India beat Pakistan by 19 runs in Asian Games men’s cricket final – updates",
+   "category": "Other",
+   "items": [
+    {
+     "id": "63b3b07e2752",
+     "title": "India beat Pakistan by 19 runs in Asian Games men’s cricket final – updates",
      "link": "https://www.aljazeera.com/sports/liveblog/2026/10/3/india-vs-pakistan-live-asian-games-cricket-final?traffic_source=rss",
      "source": "Al Jazeera",
      "time": "2026-10-03T06:37:31+00:00",
