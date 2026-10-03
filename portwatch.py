@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 BASE = ("https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/"
         "Daily_Chokepoints_Data/FeatureServer/0/query")
 WANT = {"Hormuz": "Hormuz", "Bab-el-Mandeb": "Mandeb", "Suez": "Suez", "Malacca": "Malacca"}
-DAYS = 150
+DAYS = 400
 
 
 def query(keyword):
@@ -60,11 +60,46 @@ def summarize(rows):
     cur = avg(last7, "total")
     chg = round(100 * (cur / base - 1)) if base else None
     return {"latest_date": rows[-1]["date"], "avg7_total": cur, "avg7_tanker": avg(last7, "tanker"),
-            "change_pct": chg, "baseline_total": base, "series": rows[-120:]}
+            "change_pct": chg, "baseline_total": base, "series": rows[-240:]}
+
+
+def stress(rows):
+    """Per day: shortfall of the last 7 days vs the 90 days before them, 0-100.
+    Traffic above usual counts as 0 (it never offsets another route's shortfall)."""
+    out = []
+    for i in range(96, len(rows)):
+        base = statistics.mean(r["total"] for r in rows[i - 96:i - 6])
+        if base <= 0:
+            continue
+        cur = statistics.mean(r["total"] for r in rows[i - 6:i + 1])
+        out.append((rows[i]["date"], round(100 * max(0.0, min(1.0, 1 - cur / base)), 1)))
+    return out
+
+
+def band(v):
+    return "Calm" if v < 10 else "Watchful" if v < 25 else "Strained" if v < 50 else "Severe"
+
+
+def build_index(allrows):
+    per = {k: dict(stress(r)) for k, r in allrows.items()}
+    per = {k: v for k, v in per.items() if v}
+    if len(per) < 3:
+        return None
+    series = []
+    for d in sorted({d for v in per.values() for d in v}):
+        vals = [v[d] for v in per.values() if d in v]
+        if len(vals) >= 3:
+            series.append({"date": d, "value": round(statistics.mean(vals), 1)})
+    if len(series) < 8:
+        return None
+    latest = series[-1]["value"]
+    return {"series": series[-240:], "latest": round(latest), "band": band(latest),
+            "change_7d": round(latest - series[-8]["value"]),
+            "components": {k: round(v[max(v)]) for k, v in per.items()}}
 
 
 def main():
-    out, shown = {}, False
+    out, shown, allrows = {}, False, {}
     for name, kw in WANT.items():
         try:
             resp = query(kw)
@@ -74,9 +109,11 @@ def main():
             if feats and not shown:
                 print("fields:", sorted(feats[0]["attributes"].keys()))
                 shown = True
-            s = summarize(parse(feats))
+            rows = parse(feats)
+            s = summarize(rows)
             if s:
                 out[name] = s
+                allrows[name] = rows
                 print(f"{name}: to {s['latest_date']}, {s['avg7_total']}/day, {s['change_pct']}% vs baseline")
             else:
                 print(f"[warn] {name}: no usable rows")
@@ -86,7 +123,8 @@ def main():
         sys.exit("PortWatch returned nothing - data/portwatch.json not updated")
     os.makedirs("data", exist_ok=True)
     with open("data/portwatch.json", "w", encoding="utf-8") as f:
-        json.dump({"updated": datetime.now(timezone.utc).isoformat(), "chokepoints": out}, f, separators=(",", ":"))
+        json.dump({"updated": datetime.now(timezone.utc).isoformat(), "chokepoints": out,
+                   "index": build_index(allrows)}, f, separators=(",", ":"))
 
 
 if __name__ == "__main__":
