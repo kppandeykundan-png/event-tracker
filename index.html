@@ -33,6 +33,9 @@ ul{list-style:none;margin:0;padding:0 14px 12px}
 li{padding:8px 0;border-top:1px solid var(--line)}
 li a{color:var(--ink);text-decoration:none}li a:hover{text-decoration:underline}
 .empty{color:var(--mute);padding:16px;border:1px dashed var(--line)}
+.chip{display:inline-block;margin:6px 6px 0 0;padding:1px 8px;border:1px solid var(--line);border-radius:99px;font-size:12px;color:var(--acc)}
+.num{font:600 24px "IBM Plex Serif",Georgia,serif}.dn{color:var(--hot)}.ok{color:var(--acc)}
+.cp svg{color:var(--acc);margin-top:6px}
 </style>
 </head>
 <body>
@@ -43,13 +46,18 @@ li a{color:var(--ink);text-decoration:none}li a:hover{text-decoration:underline}
   <h2>Coming up</h2>
   <div class="up" id="up"></div>
 
+  <h2>Chokepoint and port traffic</h2>
+  <p class="meta" id="cpnote"></p>
+  <div class="up cp" id="cp"></div>
+
   <h2>Developing stories</h2>
   <div class="bar" id="bar"></div>
   <div id="threads"></div>
 </main>
 <script>
 const CATS=["All","Fed","RBI","Conflict","Crude","Commodity","Markets","Other"];
-let data={threads:[],upcoming:[]},cat="All";
+const DATA_BASE=""; // set to your new host URL when you move, e.g. "https://data.example.com/"
+let data={threads:[],upcoming:[]},cat="All",ais=null;
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safe=u=>/^https?:\/\//.test(u)?u:"#";
@@ -69,17 +77,36 @@ function drawThreads(){
   const list=data.threads.filter(t=>cat==="All"||t.category===cat);
   $("threads").innerHTML=list.length?list.map(t=>`<details><summary>
     <span class="tag">${esc(t.category)}</span> <b>${esc(t.title)}</b>
-    <div class="meta">${t.items.length} update${t.items.length>1?"s":""}, latest ${ago(t.updated)}</div>
+    <div class="meta">${t.items.length} update${t.items.length>1?"s":""}, latest ${ago(t.updated)}</div>${chips(t)}
     ${t.effect?`<div class="fx">Likely effect: ${esc(t.effect)}</div>`:""}</summary>
     <ul>${t.items.map(i=>`<li><a href="${esc(safe(i.link))}" target="_blank" rel="noopener">${esc(i.title)}</a>
     <div class="meta">${esc(i.source)}, ${ago(i.time)}</div></li>`).join("")}</ul></details>`).join("")
     :'<div class="empty">No stories in this category yet. New ones appear after the next update.</div>'}
 $("bar").onclick=e=>{if(e.target.dataset.c){cat=e.target.dataset.c;drawThreads()}};
 async function load(){
-  try{const r=await fetch("events.json?t="+Date.now());if(!r.ok)throw 0;data=await r.json();
+  try{const r=await fetch(DATA_BASE+"events.json?t="+Date.now());if(!r.ok)throw 0;data=await r.json();
     $("stamp").textContent="Updated "+ago(data.updated)+". Refreshes every 5 minutes."}
   catch{$("stamp").textContent="Couldn't load events.json. Run the workflow once from the Actions tab."}
-  drawUp();drawThreads()}
+  drawUp();drawThreads();loadAis()}
+const KW={"Hormuz":/hormuz|persian gulf|gulf of oman|\biran/i,"Bab-el-Mandeb":/red sea|houthi|\byemen|gulf of aden|bab[- ]el/i,"Malacca":/malacca|singapore strait/i,"Suez":/suez/i};
+const days=a=>Object.keys(a.history).sort();
+function latest(a){const k=days(a);return a.history[k[k.length-1]]}
+function median(a){const v=days(a).filter(d=>!a.history[d].partial).slice(-14).map(d=>a.history[d].tankers).sort((x,y)=>x-y);return v.length>=3?v[Math.floor(v.length/2)]:null}
+function spark(a){const v=days(a).slice(-14).map(d=>a.history[d].tankers);if(v.length<2)return"";const m=Math.max(...v,1);
+  return`<svg viewBox="0 0 100 30" width="100%" height="30" aria-hidden="true"><polyline points="${v.map((y,i)=>`${(i*100/(v.length-1)).toFixed(1)},${(28-y/m*26).toFixed(1)}`).join(" ")}" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`}
+function chips(t){if(!ais)return"";const txt=t.title+" "+t.items.map(i=>i.title).join(" ");
+  return Object.keys(KW).filter(k=>ais.areas[k]&&KW[k].test(txt)).map(k=>`<span class="chip">${esc(k)}: ${latest(ais.areas[k]).tankers} tankers today</span>`).join("")}
+async function loadAis(){try{const r=await fetch(DATA_BASE+"data/ais_daily.json?t="+Date.now());if(!r.ok)throw 0;ais=await r.json()}catch{ais=null}drawAis();drawThreads()}
+function drawAis(){
+  if(!ais){$("cp").innerHTML='<div class="empty">No AIS data yet. Run the AIS collector workflow once from the Actions tab.</div>';$("cpnote").textContent="";return}
+  $("cpnote").textContent="Counts are vessels seen in each area today (UTC), sampled in short bursts. Capacity is tanker size, not cargo. Updated "+ago(ais.updated)+".";
+  const names=Object.keys(ais.areas).sort((x,y)=>(ais.areas[x].kind==="port")-(ais.areas[y].kind==="port"));
+  $("cp").innerHTML=names.map(n=>{const a=ais.areas[n],l=latest(a),m=median(a);
+    const diff=m?Math.round((l.tankers/m-1)*100):null,conf=l.typed_pct>=60?"good":l.typed_pct>=30?"fair":"low";
+    return`<div class="ev"><b>${esc(n)}</b><span class="meta">${esc(a.kind)} · ${conf} confidence (${l.typed_pct}% identified)</span>
+    <div class="num">${l.tankers} <span class="meta">tankers${l.partial?" so far":""}</span></div>
+    <div class="meta">${l.vessels} vessels · ${l.capacity_mbbl}M bbl capacity</div>
+    ${diff===null?'<div class="meta">Building 14-day baseline</div>':`<div class="${diff<=-40?"dn":"ok"}">${diff>=0?"+":""}${diff}% vs 14-day median (${m})</div>`}${spark(a)}</div>`}).join("")}
 load();setInterval(load,3e5);setInterval(drawUp,6e4);
 </script>
 </body>

@@ -1,0 +1,6 @@
+[
+  {"name": "VLCC", "min_len": 300, "barrels_m": 2.0},
+  {"name": "Suezmax", "min_len": 260, "barrels_m": 1.0},
+  {"name": "Aframax", "min_len": 225, "barrels_m": 0.7},
+  {"name": "MR/Handy", "min_len": 150, "barrels_m": 0.3}
+]

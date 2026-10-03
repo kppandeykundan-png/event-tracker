@@ -1,0 +1,2 @@
+# crontab -e   (replace USER and paths)
+*/15 * * * * /home/USER/event-tracker/migration/run_all.sh >> /home/USER/tracker.log 2>&1
