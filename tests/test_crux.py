@@ -18,6 +18,26 @@ class T(unittest.TestCase):
         self.assertNotIn("short\n", t + "\n")
         self.assertEqual(t.count("maintain the target range"), 12)  # footer excluded
 
+    def test_form_wrapped_page_is_read(self):                      # ASP.NET sites (RBI) wrap everything in <form>
+        t = crux.html_to_text(f"<html><body><form id='f'><table><tr><td><p>{LONG}</p></td></tr></table></form></body></html>")
+        self.assertGreater(len(t), crux.MIN_CHARS)
+
+    def test_api_request_has_no_temperature(self):
+        seen = {}
+        class R:
+            def __enter__(s): return s
+            def __exit__(s, *a): pass
+            def read(s): return b'{"content":[{"type":"text","text":"{}"}]}'
+        def fake(req, timeout=0):
+            seen.update(json.loads(req.data)); return R()
+        old = crux.urllib.request.urlopen; os.environ["ANTHROPIC_API_KEY"] = "t"
+        crux.urllib.request.urlopen = fake
+        try:
+            crux.ask_claude("x", "l", "FED")
+        finally:
+            crux.urllib.request.urlopen = old
+        self.assertNotIn("temperature", seen)
+
     def test_discover_fed(self):
         h = '<a href="/newsevents/pressreleases/monetary20260916a.htm">x</a><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916b.htm">p</a><a href="/newsevents/pressreleases/monetary20260729a.htm">y</a>'
         r = {c["date"]: c for c in crux.discover_fed(h, "")}
