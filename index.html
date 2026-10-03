@@ -50,6 +50,10 @@ li a{color:var(--ink);text-decoration:none}li a:hover{text-decoration:underline}
   <p class="meta" id="cpnote"></p>
   <div class="up cp" id="cp"></div>
 
+  <h2>Official transit counts (delayed)</h2>
+  <p class="meta" id="pwnote"></p>
+  <div class="up cp" id="pw"></div>
+
   <h2>Developing stories</h2>
   <div class="bar" id="bar"></div>
   <div id="threads"></div>
@@ -87,7 +91,7 @@ async function load(){
   try{const r=await fetch(DATA_BASE+"events.json?t="+Date.now());if(!r.ok)throw 0;data=await r.json();
     $("stamp").textContent="Updated "+ago(data.updated)+". Refreshes every 5 minutes."}
   catch{$("stamp").textContent="Couldn't load events.json. Run the workflow once from the Actions tab."}
-  drawUp();drawThreads();loadAis()}
+  drawUp();drawThreads();loadAis();loadPw()}
 const KW={"Hormuz":/hormuz|persian gulf|gulf of oman|\biran/i,"Bab-el-Mandeb":/red sea|houthi|\byemen|gulf of aden|bab[- ]el/i,"Malacca":/malacca|singapore strait/i,"Suez":/suez/i};
 const days=a=>Object.keys(a.history).sort();
 function latest(a){const k=days(a);return a.history[k[k.length-1]]}
@@ -102,11 +106,25 @@ function drawAis(){
   $("cpnote").textContent="Counts are vessels seen in each area today (UTC), sampled in short bursts. Capacity is tanker size, not cargo. Updated "+ago(ais.updated)+".";
   const names=Object.keys(ais.areas).sort((x,y)=>(ais.areas[x].kind==="port")-(ais.areas[y].kind==="port"));
   $("cp").innerHTML=names.map(n=>{const a=ais.areas[n],l=latest(a),m=median(a);
+    if(days(a).every(d=>a.history[d].vessels===0))return`<div class="ev"><b>${esc(n)}</b><span class="meta">${esc(a.kind)} · no coverage</span>
+    <div class="meta">The free AIS feed has not heard any ships here, so this is a data gap, not an empty waterway.</div></div>`;
     const diff=m?Math.round((l.tankers/m-1)*100):null,conf=l.typed_pct>=60?"good":l.typed_pct>=30?"fair":"low";
     return`<div class="ev"><b>${esc(n)}</b><span class="meta">${esc(a.kind)} · ${conf} confidence (${l.typed_pct}% identified)</span>
-    <div class="num">${l.tankers} <span class="meta">tankers${l.partial?" so far":""}</span></div>
-    <div class="meta">${l.vessels} vessels · ${l.capacity_mbbl}M bbl capacity</div>
+    <div class="num">${l.typed_pct<60?"at least ":""}${l.tankers} <span class="meta">tankers identified${l.partial?" so far":""}</span></div>
+    <div class="meta">${l.vessels} vessels seen · ${l.typed_pct>=60?l.capacity_mbbl+"M bbl tanker capacity":"capacity shown once 60% of vessels are identified"}</div>
     ${diff===null?'<div class="meta">Building 14-day baseline</div>':`<div class="${diff<=-40?"dn":"ok"}">${diff>=0?"+":""}${diff}% vs 14-day median (${m})</div>`}${spark(a)}</div>`}).join("")}
+let pw=null;
+function line(v){if(v.length<2)return"";const m=Math.max(...v,1);
+  return`<svg viewBox="0 0 100 30" width="100%" height="30" aria-hidden="true"><polyline points="${v.map((y,i)=>`${(i*100/(v.length-1)).toFixed(1)},${(28-y/m*26).toFixed(1)}`).join(" ")}" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`}
+async function loadPw(){try{const r=await fetch(DATA_BASE+"data/portwatch.json?t="+Date.now());if(!r.ok)throw 0;pw=await r.json()}catch{pw=null}drawPw()}
+function drawPw(){
+  if(!pw){$("pw").innerHTML='<div class="empty">No PortWatch data yet. Run the PortWatch workflow once from the Actions tab.</div>';$("pwnote").textContent="";return}
+  $("pwnote").textContent="Daily ship transits from satellite AIS, published weekly, so always a few days behind. Sources: UN Global Platform; IMF PortWatch (portwatch.imf.org).";
+  $("pw").innerHTML=Object.keys(pw.chokepoints).map(n=>{const c=pw.chokepoints[n],d=c.change_pct;
+    return`<div class="ev"><b>${esc(n)}</b><span class="meta">data to ${esc(c.latest_date)}</span>
+    <div class="num">${c.avg7_total} <span class="meta">ships/day (7-day avg)</span></div>
+    <div class="meta">${c.avg7_tanker} tankers/day</div>
+    ${d===null?'<div class="meta">Baseline needs more history</div>':`<div class="${d<=-25?"dn":"ok"}">${d>=0?"+":""}${d}% vs prior 90-day avg</div>`}${line(c.series.map(x=>x.total))}</div>`}).join("")}
 load();setInterval(load,3e5);setInterval(drawUp,6e4);
 </script>
 </body>
