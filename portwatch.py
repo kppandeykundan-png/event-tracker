@@ -64,8 +64,7 @@ def summarize(rows):
 
 
 def stress(rows):
-    """Per day: shortfall of the last 7 days vs the 90 days before them, 0-100.
-    Traffic above usual counts as 0 (it never offsets another route's shortfall)."""
+    """Per day: how far the last 7 days fall short of the 90 days before them (0-100)."""
     out = []
     for i in range(96, len(rows)):
         base = statistics.mean(r["total"] for r in rows[i - 96:i - 6])
