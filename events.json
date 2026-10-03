@@ -1,6 +1,24 @@
 {
- "updated": "2026-10-03T00:55:34.546221+00:00",
+ "updated": "2026-10-03T01:06:27.266326+00:00",
  "threads": [
+  {
+   "id": "tc1f8a223",
+   "title": "US and Australia suspend diplomatic operations in Brazil before election",
+   "category": "Other",
+   "items": [
+    {
+     "id": "a187ccf1ee2f",
+     "title": "US and Australia suspend diplomatic operations in Brazil before election",
+     "link": "https://www.aljazeera.com/news/2026/10/3/us-and-australia-suspend-diplomatic-operations-in-brazil-before-election?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T00:46:10+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T00:46:10+00:00",
+   "effect": ""
+  },
   {
    "id": "t64e726b7",
    "title": "Iran war live: Fighting intensifies in Yemen, hundreds killed or injured",
@@ -4869,6 +4887,24 @@
     {
      "id": "0ccc42c59bc7",
      "title": "Crude oil exports from strait of Hormuz largely return to pre-war levels - The Guardian",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcGNCX0VlMWRST1A0YVJxWVlHTGI2VGE2UUtRZXpnTTMwQW0zWmpDakdpTUI3ZFcwd0VLQ0xMemFfRkg1VkdjUGh1YUppeVNTdkZSbFVPX3lhMjZSR3ZITVJObHRJdC0ycklwUmF2d042VU5UeHlWWm1KNVJuVUQ4VW9PNHpfZHVRRW5iMzRiekdxWWhmWE42R011RXF6SjZUZktEdjZQZVdObkJXbVZqSlR3?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-01T15:53:00+00:00",
+     "category": "Conflict",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-01T15:53:00+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tffcf98a3",
+   "title": "Crude oil exports from strait of Hormuz largely return to pre-war levels - theguardian.com",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "06fb750b97cd",
+     "title": "Crude oil exports from strait of Hormuz largely return to pre-war levels - theguardian.com",
      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcGNCX0VlMWRST1A0YVJxWVlHTGI2VGE2UUtRZXpnTTMwQW0zWmpDakdpTUI3ZFcwd0VLQ0xMemFfRkg1VkdjUGh1YUppeVNTdkZSbFVPX3lhMjZSR3ZITVJObHRJdC0ycklwUmF2d042VU5UeHlWWm1KNVJuVUQ4VW9PNHpfZHVRRW5iMzRiekdxWWhmWE42R011RXF6SjZUZktEdjZQZVdObkJXbVZqSlR3?oc=5",
      "source": "Google News Markets",
      "time": "2026-10-01T15:53:00+00:00",
