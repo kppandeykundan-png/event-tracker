@@ -3,129 +3,167 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Live Event Tracker</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
+<title>Market Pulse</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eef1f4;--panel:#fff;--ink:#14202e;--mute:#5d6b7a;--line:#d5dce3;--hot:#b3261e;--acc:#0f6e6e}
-@media(prefers-color-scheme:dark){:root{--bg:#101820;--panel:#18232e;--ink:#e6ecf1;--mute:#93a1ae;--line:#2a3846;--hot:#ff7b72;--acc:#4fc3c3}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "IBM Plex Sans",system-ui,sans-serif}
-main{max-width:920px;margin:0 auto;padding:24px 16px 64px}
-h1{font:600 28px "IBM Plex Serif",Georgia,serif;margin:0}
-h2{font:600 18px "IBM Plex Serif",Georgia,serif;margin:32px 0 10px}
-.sub{color:var(--mute);margin:4px 0 0}
-.up{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
-.ev{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--line);padding:10px 12px}
-.ev.High{border-left-color:var(--hot)}
-.ev b{display:block}.cd{font-variant-numeric:tabular-nums;color:var(--hot);font-weight:600}
-.bar{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 12px}
-.bar button{font:inherit;background:none;color:var(--ink);border:1px solid var(--line);padding:3px 12px;border-radius:99px;cursor:pointer}
-.bar button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
-button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-details{background:var(--panel);border:1px solid var(--line);margin-bottom:8px}
-summary{cursor:pointer;padding:12px 14px;list-style:none}
-summary::-webkit-details-marker{display:none}
-summary b{font-size:16px}
-.meta{color:var(--mute);font-size:13px}
-.tag{color:var(--acc);font-weight:600}
-.fx{margin-top:4px}
-ul{list-style:none;margin:0;padding:0 14px 12px}
-li{padding:8px 0;border-top:1px solid var(--line)}
-li a{color:var(--ink);text-decoration:none}li a:hover{text-decoration:underline}
-.empty{color:var(--mute);padding:16px;border:1px dashed var(--line)}
-.chip{display:inline-block;margin:6px 6px 0 0;padding:1px 8px;border:1px solid var(--line);border-radius:99px;font-size:12px;color:var(--acc)}
-.num{font:600 24px "IBM Plex Serif",Georgia,serif}.dn{color:var(--hot)}.ok{color:var(--acc)}
-.cp svg{color:var(--acc);margin-top:6px}
+:root{--bg:#f1f5f6;--card:#fff;--ink:#0b2a3c;--mute:#566d7c;--line:#d9e3e8;--sea:#0e7c86;--tint:#e4f2f3;--gold:#b86e00;--bad:#c93b33;--hero:#0b2a3c}
+@media(prefers-color-scheme:dark){:root{--bg:#08151f;--card:#102232;--ink:#e8f0f4;--mute:#9bb0bd;--line:#20394b;--sea:#4fd1c5;--tint:#123a44;--gold:#f6b95a;--bad:#ff8077;--hero:#0c2233}}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "DM Sans",system-ui,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+.hero{background:var(--hero);color:#eaf3f6;padding:38px 0 26px}
+h1{font:700 clamp(32px,6vw,50px)/1.1 "Fraunces",Georgia,serif;margin:0 0 10px}
+.tag{color:#b9d0da;font-size:18px;max-width:620px;margin:0 0 18px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.pill{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.1);padding:4px 14px;border-radius:99px;font-size:14px}
+.pill i{width:8px;height:8px;border-radius:50%;background:#5eead4;animation:pu 2s infinite}
+@keyframes pu{50%{opacity:.3}}
+.cta{background:#f6b95a;color:#0b2a3c;font-weight:700;padding:8px 20px;border-radius:8px;text-decoration:none}
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:24px}
+.tile{display:block;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:12px 14px;color:inherit;text-decoration:none}
+.tile:hover{background:rgba(255,255,255,.07)}
+.tile span{display:block;color:#b9d0da;font-size:14px}.tile b{font:700 32px/1.1 "Fraunces",Georgia,serif}.tile small{margin-left:6px;color:#b9d0da}
+.tile em{display:block;font-style:normal;font-size:14px;color:#cfe1e8}.tile em.bad{color:#ff9c94}.tile em.good{color:#7fe3d6}
+.tools{display:flex;justify-content:flex-end;gap:8px;margin:18px 0 -4px}
+.tools button,.cats button{font:inherit;font-size:14px;background:none;color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:3px 14px;cursor:pointer}
+.cats{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.cats button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:14px 0;overflow:hidden}
+summary{cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}
+.panel>summary{display:flex;gap:14px;align-items:center;padding:16px 18px}
+.ic{flex:none;width:42px;height:42px;border-radius:50%;background:var(--tint);color:var(--sea);display:grid;place-items:center}
+.ic svg{width:22px;height:22px}
+.pt{flex:1;min-width:0}.pt b{display:block;font:600 21px/1.2 "Fraunces",Georgia,serif}.pt small{color:var(--mute);font-size:14px}
+.badge{background:var(--tint);color:var(--sea);font-weight:700;font-size:13px;border-radius:99px;padding:1px 10px}
+.chev svg{width:20px;height:20px;color:var(--mute);transition:transform .2s}details[open]>summary .chev svg{transform:rotate(180deg)}
+:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+.pb{padding:4px 18px 18px}
+.lead{font:600 19px/1.45 "Fraunces",Georgia,serif;margin:6px 0 14px}
+.routes,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+.route{border:1px solid var(--line);border-radius:10px;padding:16px}
+.route h3{margin:0;font:600 18px "Fraunces",Georgia,serif}.why{color:var(--mute);font-size:14px;margin:4px 0 10px}
+.big{font:700 34px/1.1 "Fraunces",Georgia,serif}.big span{font:400 15px "DM Sans",sans-serif;color:var(--mute)}
+.tr{font-weight:700;margin:2px 0 6px;color:var(--mute)}.tr.bad{color:var(--bad)}.tr.good{color:var(--sea)}
+.cw{position:relative}.chart{width:100%;height:auto;display:block;touch-action:pan-y}
+.gl{stroke:var(--line)}.ax{fill:var(--mute);font-size:9px}.ar{fill:var(--sea);opacity:.15}.ln{fill:none;stroke:var(--sea);stroke-width:2}
+.us{stroke:var(--gold);stroke-dasharray:4 3;stroke-width:1.5}.ul{fill:var(--gold);font-size:9px;font-weight:700}
+.dot{fill:var(--sea)}.hv{stroke:var(--mute);opacity:0}.hc{fill:var(--card);stroke:var(--sea);stroke-width:2;opacity:0}
+.tip{position:absolute;top:0;pointer-events:none;background:var(--ink);color:var(--card);font-size:12px;padding:2px 8px;border-radius:6px;opacity:0;transform:translateX(-50%);white-space:nowrap}
+.foot,.src,.meta{color:var(--mute);font-size:13px;margin:6px 0 0}.src{margin-top:14px}
+.story{border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
+.story>summary{padding:12px 14px;border-left:4px solid var(--c,var(--line));border-radius:10px}
+.story b{display:block;font-size:17px;line-height:1.35;margin:2px 0}
+.cat{font-weight:700;font-size:13px;color:var(--c)}.hi{margin-left:8px;font-size:12px;font-weight:700;color:var(--bad)}
+.fx{display:block;margin-top:4px;font-size:14px}
+.chip{display:inline-block;margin:6px 6px 0 0;padding:1px 10px;border:1px solid var(--line);border-radius:99px;font-size:12px;color:var(--sea)}
+.story ul{list-style:none;margin:0;padding:0 14px 8px 18px}.story li{padding:8px 0;border-top:1px solid var(--line)}
+.story li a,.art a{color:var(--sea)}
+.ev{display:block;border:1px solid var(--line);border-left:4px solid var(--line);border-radius:8px;padding:10px 14px;color:inherit;text-decoration:none}
+.ev.hot{border-left-color:var(--bad)}.ev.rs{border-left-color:var(--sea)}.ev.rs:hover{background:var(--tint)}
+.cd{color:var(--bad);font-weight:700}.ev p{margin:6px 0 0;font-size:15px}
+.art{border:1px solid var(--line);border-radius:10px;margin-bottom:10px}.art>summary{padding:12px 14px}.art>summary b{font:600 19px/1.3 "Fraunces",Georgia,serif;display:block}
+.ab{padding:0 16px 12px;max-width:70ch}
+.empty{color:var(--mute);padding:14px;border:1px dashed var(--line);border-radius:10px;margin:8px 0}
+footer{color:var(--mute);font-size:13px;padding:10px 0 48px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<main>
-  <h1>Live Event Tracker</h1>
-  <p class="sub" id="stamp">Loading latest events…</p>
-
-  <h2>Coming up</h2>
-  <div class="up" id="up"></div>
-
-  <h2>Chokepoint and port traffic</h2>
-  <p class="meta" id="cpnote"></p>
-  <div class="up cp" id="cp"></div>
-
-  <h2>Official transit counts (delayed)</h2>
-  <p class="meta" id="pwnote"></p>
-  <div class="up cp" id="pw"></div>
-
-  <h2>Developing stories</h2>
-  <div class="bar" id="bar"></div>
-  <div id="threads"></div>
+<header class="hero"><div class="wrap">
+  <h1 id="brand"></h1><p class="tag" id="tag"></p>
+  <div class="row"><span class="pill"><i></i><span id="stamp">Loading the latest…</span></span><a id="cta" class="cta" hidden></a></div>
+  <div class="glance" id="glance"></div>
+</div></header>
+<main class="wrap">
+  <div class="tools"><button id="exp">Expand all</button><button id="col">Collapse all</button></div>
+  <div id="panels"></div>
+  <footer>Ship transit data: UN Global Platform and IMF PortWatch (portwatch.imf.org). News links go to their publishers. Briefs are written by AI from public headlines and official data, for information only. Nothing here is investment advice or a recommendation to buy, sell or hold any security.</footer>
 </main>
 <script>
-const CATS=["All","Fed","RBI","Conflict","Crude","Commodity","Markets","Other"];
+const SITE={name:"Market Pulse",tagline:"Oil routes, central banks and company research",subscribe:""};
 const DATA_BASE=""; // set to your new host URL when you move, e.g. "https://data.example.com/"
-let data={threads:[],upcoming:[]},cat="All",ais=null;
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safe=u=>/^https?:\/\//.test(u)?u:"#";
-function ago(iso){const m=Math.max(0,(Date.now()-new Date(iso))/6e4);
-  return m<60?Math.round(m)+" min ago":m<1440?Math.round(m/60)+" h ago":Math.round(m/1440)+" d ago"}
-function until(iso){const s=(new Date(iso)-Date.now())/1e3;
-  if(s<=0)return"happening now";const d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);
-  return"in "+(d?d+"d ":"")+(h||d?h+"h ":"")+m+"m"}
-function drawUp(){
-  $("up").innerHTML=data.upcoming.length?data.upcoming.map(e=>`<div class="ev ${esc(e.impact)}">
-    <b>${esc(e.title)}</b><span class="meta">${esc(e.country)} · ${new Date(e.time).toLocaleString([],{weekday:"short",hour:"2-digit",minute:"2-digit"})}</span>
-    <div class="cd">${until(e.time)}</div>
-    ${e.forecast||e.previous?`<div class="meta">Forecast ${esc(e.forecast||"–")}, previous ${esc(e.previous||"–")}</div>`:""}</div>`).join("")
-    :'<div class="empty">No major events scheduled this week.</div>'}
-function drawThreads(){
-  $("bar").innerHTML=CATS.map(c=>`<button aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join("");
-  const list=data.threads.filter(t=>cat==="All"||t.category===cat);
-  $("threads").innerHTML=list.length?list.map(t=>`<details><summary>
-    <span class="tag">${esc(t.category)}</span> <b>${esc(t.title)}</b>
-    <div class="meta">${t.items.length} update${t.items.length>1?"s":""}, latest ${ago(t.updated)}</div>${chips(t)}
-    ${t.effect?`<div class="fx">Likely effect: ${esc(t.effect)}</div>`:""}</summary>
-    <ul>${t.items.map(i=>`<li><a href="${esc(safe(i.link))}" target="_blank" rel="noopener">${esc(i.title)}</a>
-    <div class="meta">${esc(i.source)}, ${ago(i.time)}</div></li>`).join("")}</ul></details>`).join("")
-    :'<div class="empty">No stories in this category yet. New ones appear after the next update.</div>'}
-$("bar").onclick=e=>{if(e.target.dataset.c){cat=e.target.dataset.c;drawThreads()}};
-async function load(){
-  try{const r=await fetch(DATA_BASE+"events.json?t="+Date.now());if(!r.ok)throw 0;data=await r.json();
-    $("stamp").textContent="Updated "+ago(data.updated)+". Refreshes every 5 minutes."}
-  catch{$("stamp").textContent="Couldn't load events.json. Run the workflow once from the Actions tab."}
-  drawUp();drawThreads();loadAis();loadPw()}
-const KW={"Hormuz":/hormuz|persian gulf|gulf of oman|\biran/i,"Bab-el-Mandeb":/red sea|houthi|\byemen|gulf of aden|bab[- ]el/i,"Malacca":/malacca|singapore strait/i,"Suez":/suez/i};
-const days=a=>Object.keys(a.history).sort();
-function latest(a){const k=days(a);return a.history[k[k.length-1]]}
-function median(a){const v=days(a).filter(d=>!a.history[d].partial).slice(-14).map(d=>a.history[d].tankers).sort((x,y)=>x-y);return v.length>=3?v[Math.floor(v.length/2)]:null}
-function spark(a){const v=days(a).slice(-14).map(d=>a.history[d].tankers);if(v.length<2)return"";const m=Math.max(...v,1);
-  return`<svg viewBox="0 0 100 30" width="100%" height="30" aria-hidden="true"><polyline points="${v.map((y,i)=>`${(i*100/(v.length-1)).toFixed(1)},${(28-y/m*26).toFixed(1)}`).join(" ")}" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`}
-function chips(t){if(!ais)return"";const txt=t.title+" "+t.items.map(i=>i.title).join(" ");
-  return Object.keys(KW).filter(k=>ais.areas[k]&&KW[k].test(txt)).map(k=>`<span class="chip">${esc(k)}: ${latest(ais.areas[k]).tankers} tankers today</span>`).join("")}
-async function loadAis(){try{const r=await fetch(DATA_BASE+"data/ais_daily.json?t="+Date.now());if(!r.ok)throw 0;ais=await r.json()}catch{ais=null}drawAis();drawThreads()}
-function drawAis(){
-  if(!ais){$("cp").innerHTML='<div class="empty">No AIS data yet. Run the AIS collector workflow once from the Actions tab.</div>';$("cpnote").textContent="";return}
-  $("cpnote").textContent="Counts are vessels seen in each area today (UTC), sampled in short bursts. Capacity is tanker size, not cargo. Updated "+ago(ais.updated)+".";
-  const names=Object.keys(ais.areas).sort((x,y)=>(ais.areas[x].kind==="port")-(ais.areas[y].kind==="port"));
-  $("cp").innerHTML=names.map(n=>{const a=ais.areas[n],l=latest(a),m=median(a);
-    if(days(a).every(d=>a.history[d].vessels===0))return`<div class="ev"><b>${esc(n)}</b><span class="meta">${esc(a.kind)} · no coverage</span>
-    <div class="meta">The free AIS feed has not heard any ships here, so this is a data gap, not an empty waterway.</div></div>`;
-    const diff=m?Math.round((l.tankers/m-1)*100):null,conf=l.typed_pct>=60?"good":l.typed_pct>=30?"fair":"low";
-    return`<div class="ev"><b>${esc(n)}</b><span class="meta">${esc(a.kind)} · ${conf} confidence (${l.typed_pct}% identified)</span>
-    <div class="num">${l.typed_pct<60?"at least ":""}${l.tankers} <span class="meta">tankers identified${l.partial?" so far":""}</span></div>
-    <div class="meta">${l.vessels} vessels seen · ${l.typed_pct>=60?l.capacity_mbbl+"M bbl tanker capacity":"capacity shown once 60% of vessels are identified"}</div>
-    ${diff===null?'<div class="meta">Building 14-day baseline</div>':`<div class="${diff<=-40?"dn":"ok"}">${diff>=0?"+":""}${diff}% vs 14-day median (${m})</div>`}${spark(a)}</div>`}).join("")}
-let pw=null;
-function line(v){if(v.length<2)return"";const m=Math.max(...v,1);
-  return`<svg viewBox="0 0 100 30" width="100%" height="30" aria-hidden="true"><polyline points="${v.map((y,i)=>`${(i*100/(v.length-1)).toFixed(1)},${(28-y/m*26).toFixed(1)}`).join(" ")}" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`}
-async function loadPw(){try{const r=await fetch(DATA_BASE+"data/portwatch.json?t="+Date.now());if(!r.ok)throw 0;pw=await r.json()}catch{pw=null}drawPw()}
-function drawPw(){
-  if(!pw){$("pw").innerHTML='<div class="empty">No PortWatch data yet. Run the PortWatch workflow once from the Actions tab.</div>';$("pwnote").textContent="";return}
-  $("pwnote").textContent="Daily ship transits from satellite AIS, published weekly, so always a few days behind. Sources: UN Global Platform; IMF PortWatch (portwatch.imf.org).";
-  $("pw").innerHTML=Object.keys(pw.chokepoints).map(n=>{const c=pw.chokepoints[n],d=c.change_pct;
-    return`<div class="ev"><b>${esc(n)}</b><span class="meta">data to ${esc(c.latest_date)}</span>
-    <div class="num">${c.avg7_total} <span class="meta">ships/day (7-day avg)</span></div>
-    <div class="meta">${c.avg7_tanker} tankers/day</div>
-    ${d===null?'<div class="meta">Baseline needs more history</div>':`<div class="${d<=-25?"dn":"ok"}">${d>=0?"+":""}${d}% vs prior 90-day avg</div>`}${line(c.series.map(x=>x.total))}</div>`}).join("")}
-load();setInterval(load,3e5);setInterval(drawUp,6e4);
+const ic=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+const I={doc:ic('<path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/>'),lens:ic('<circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/>'),
+ ship:ic('<path d="M3 18c2 0 2-1.5 4.5-1.5S10 18 12 18s2.5-1.5 4.5-1.5S19 18 21 18"/><path d="m5 13 1.5-5h11L19 13z"/><path d="M12 8V4h3"/>'),
+ bolt:ic('<path d="M13 3 5 14h6l-1 7 8-11h-6z"/>'),cal:ic('<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>'),
+ radar:ic('<circle cx="12" cy="12" r="2"/><path d="M7.5 7.5a6.4 6.4 0 0 0 0 9M16.5 7.5a6.4 6.4 0 0 1 0 9M4.5 4.5a10.6 10.6 0 0 0 0 15M19.5 4.5a10.6 10.6 0 0 1 0 15"/>')};
+const chev=ic('<path d="m6 9 6 6 6-6"/>');
+const ago=i=>{const m=Math.max(0,(Date.now()-new Date(i))/6e4);return m<1?"just now":m<60?Math.round(m)+" min ago":m<1440?Math.round(m/60)+" h ago":Math.round(m/1440)+" d ago"};
+const until=i=>{const s=(new Date(i)-Date.now())/1e3;if(s<=0)return"happening now";const d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);return"in "+(d?d+"d ":"")+(h||d?h+"h ":"")+m+"m"};
+const fd=d=>new Date(d+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"short",timeZone:"UTC"});
+const R={Hormuz:{n:"Strait of Hormuz",s:"Hormuz",w:"The Gulf's only sea exit. About a fifth of the world's oil and LNG passed through before the Iran war."},
+ "Bab-el-Mandeb":{n:"Bab-el-Mandeb (Red Sea)",s:"Red Sea",w:"The Red Sea's southern gate, used by ships heading to the Suez Canal between Asia and Europe."},
+ Suez:{n:"Suez Canal",s:"Suez",w:"The shortcut between Asia and Europe. Fewer transits usually mean longer voyages and higher freight costs."},
+ Malacca:{n:"Strait of Malacca",s:"Malacca",w:"Asia's busiest oil artery, linking the Indian and Pacific oceans and feeding China, Japan and Korea."}};
+const KW={Hormuz:/hormuz|persian gulf|gulf of oman|\biran/i,"Bab-el-Mandeb":/red sea|houthi|\byemen|gulf of aden|bab[- ]el/i,Malacca:/malacca|singapore strait/i,Suez:/suez/i};
+const COL={Fed:"--sea",RBI:"--sea",Conflict:"--bad",Crude:"--gold",Commodity:"--gold",Markets:"--ink"};
+let data={threads:[],upcoming:[]},pw=null,ais=null,arts=[],posts=[],sig="",cat="All",open={};
+try{open=JSON.parse(localStorage.getItem("open")||"{}")}catch{}
+const days=a=>Object.keys(a.history).sort(),latest=a=>a.history[days(a).pop()];
+function trend(c){const d=c.change_pct;if(d==null)return{t:"Building history",k:""};
+  return d<0?{t:`▼ ${-d}% below usual`,k:d<=-25?"bad":""}:{t:`▲ ${d}% above usual`,k:d>=25?"good":""}}
+const niceMax=m=>{const p=10**Math.floor(Math.log10(m)),f=m/p;return(f<=1?1:f<=2?2:f<=5?5:10)*p};
+const CH={W:320,H:150,L:30,R:8,T:12,B:22};
+function chart(k,c){const s=c.series||[];if(s.length<3)return"";const{W,H,L,R:Rr,T,B}=CH,v=s.map(x=>x.total),n=v.length,base=c.baseline_total??null,top=niceMax(Math.max(...v,base||0,1));
+  const X=i=>L+i*(W-L-Rr)/(n-1),Y=y=>T+(1-y/top)*(H-T-B),f=x=>x.toFixed(1),pts=v.map((y,i)=>f(X(i))+","+f(Y(y))).join(" ");
+  const grid=[0,top/2,top].map(g=>`<line class="gl" x1="${L}" x2="${W-Rr}" y1="${f(Y(g))}" y2="${f(Y(g))}"/><text class="ax" x="${L-4}" y="${f(Y(g)+3)}" text-anchor="end">${g}</text>`).join("");
+  const us=base?`<line class="us" x1="${L}" x2="${W-Rr}" y1="${f(Y(base))}" y2="${f(Y(base))}"/><text class="ul" x="${W-Rr}" y="${f(Y(base)-4)}" text-anchor="end">usual ${Math.round(base)}</text>`:"";
+  return`<div class="cw" data-k="${esc(k)}" data-top="${top}"><svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Ships per day through ${esc(R[k].n)}">${grid}<polygon class="ar" points="${L},${f(Y(0))} ${pts} ${f(X(n-1))},${f(Y(0))}"/>${us}<polyline class="ln" points="${pts}"/><circle class="dot" cx="${f(X(n-1))}" cy="${f(Y(v[n-1]))}" r="3.5"/><line class="hv" y1="${T}" y2="${H-B}"/><circle class="hc" r="4"/><text class="ax" x="${L}" y="${H-6}">${fd(s[0].date)}</text><text class="ax" x="${W-Rr}" y="${H-6}" text-anchor="end">${fd(s[n-1].date)}</text></svg><div class="tip"></div></div>`}
+function hover(e){const w=e.target.closest(".cw");if(!w||!pw)return;const c=pw.chokepoints[w.dataset.k],s=c.series,n=s.length,r=w.getBoundingClientRect(),{W,H,L,R:Rr,T,B}=CH,top=+w.dataset.top;
+  const i=Math.max(0,Math.min(n-1,Math.round(((e.clientX-r.left)/r.width*W-L)/(W-L-Rr)*(n-1)))),x=L+i*(W-L-Rr)/(n-1),y=T+(1-s[i].total/top)*(H-T-B);
+  const hv=w.querySelector(".hv"),hc=w.querySelector(".hc"),tip=w.querySelector(".tip");
+  hv.setAttribute("x1",x);hv.setAttribute("x2",x);hv.style.opacity=1;hc.setAttribute("cx",x);hc.setAttribute("cy",y);hc.style.opacity=1;
+  tip.textContent=`${fd(s[i].date)}: ${s[i].total} ships`;tip.style.left=(x/W*r.width)+"px";tip.style.opacity=1}
+function unhover(e){const w=e.target.closest(".cw");if(w&&!w.contains(e.relatedTarget)){w.querySelector(".hv").style.opacity=0;w.querySelector(".hc").style.opacity=0;w.querySelector(".tip").style.opacity=0}}
+function chips(t){if(!pw)return"";const x=t.title+" "+t.items.map(i=>i.title).join(" ");
+  return Object.keys(KW).filter(k=>pw.chokepoints[k]&&KW[k].test(x)).map(k=>{const c=pw.chokepoints[k];return`<span class="chip">${esc(R[k].s)}: ${c.avg7_total} ships a day${c.change_pct==null?"":", "+trend(c).t.replace(/^[▲▼] /,"")}</span>`}).join("")}
+function glance(){if(!pw)return"";return Object.keys(R).filter(k=>pw.chokepoints[k]).map(k=>{const c=pw.chokepoints[k],t=trend(c);
+  return`<a class="tile" href="#p-routes" data-open="routes"><span>${R[k].s}</span><b>${c.avg7_total}</b><small>ships a day</small><em class="${t.k}">${t.t}</em></a>`}).join("")}
+function buildBrief(){const a=arts.slice(0,3);if(!a.length)return null;
+  return{n:a.length,html:a.map((x,i)=>`<details class="art" ${i?"":"open"}><summary><b>${esc(x.title)}</b><span class="meta">${esc(x.kind)}, ${fd(x.date)}. Written by AI from public headlines and official data.</span></summary><div class="ab">${x.body.split(/\n\s*\n/).map(p=>`<p>${esc(p)}</p>`).join("")}<p class="meta">Sources: ${x.sources.map(s=>`<a href="${esc(safe(s.link))}" target="_blank" rel="noopener">${esc(s.source)}</a>`).join(", ")}</p></div></details>`).join("")}}
+function buildResearch(){
+  if(!posts.length)return{n:0,html:`<p class="empty">New research is on the way.${SITE.subscribe?` <a href="${esc(safe(SITE.subscribe))}">Get notified when it lands.</a>`:""}</p>`};
+  return{n:posts.length,html:`<div class="grid">${posts.slice(0,9).map(p=>`<a class="ev rs" href="research.html?p=${encodeURIComponent(p.slug)}"><b>${esc(p.title)}</b><span class="meta">${p.date?fd(p.date):""}</span><p>${esc(p.summary)}</p>${p.tickers.map(t=>`<span class="chip">${esc(t)}</span>`).join("")}</a>`).join("")}</div>`}}
+function buildRoutes(){const ks=Object.keys(R).filter(k=>pw&&pw.chokepoints[k]);if(!ks.length)return null;
+  const big=ks.reduce((a,k)=>Math.abs(pw.chokepoints[k].change_pct||0)>Math.abs(pw.chokepoints[a].change_pct||0)?k:a,ks[0]),b=pw.chokepoints[big],
+  lead=b.change_pct==null?"":`Biggest shift: ${R[big].n} is seeing ${b.avg7_total} ships a day, ${Math.abs(b.change_pct)}% ${b.change_pct<0?"below":"above"} its usual pace.`,
+  last=ks.map(k=>pw.chokepoints[k].latest_date).sort().pop();
+  return{n:ks.length,html:`<p class="lead">${esc(lead)}</p><div class="routes">${ks.map(k=>{const c=pw.chokepoints[k],t=trend(c);
+  return`<article class="route"><h3>${R[k].n}</h3><p class="why">${R[k].w}</p><div class="big">${c.avg7_total}<span> ships a day</span></div><div class="tr ${t.k}">${t.t}</div>${chart(k,c)}<p class="foot">${c.avg7_tanker} of them tankers. Latest data: ${fd(c.latest_date)}.</p></article>`}).join("")}</div>
+  <p class="src">Each line shows ships passing per day. The gold line, "usual", is the average of the 90 days before the latest week. Latest data: ${fd(last)}. Source: UN Global Platform; IMF PortWatch (portwatch.imf.org).</p>`}}
+function buildMovers(){const cut=Date.now()-48*36e5,all=(data.threads||[]).filter(t=>t.impact>=3&&new Date(t.updated)>cut);
+  if(!all.length)return{n:0,html:'<p class="empty">No big market stories right now. New ones appear here as they break.</p>'};
+  const cats=["All",...new Set(all.map(t=>t.category))],list=all.filter(t=>cat==="All"||t.category===cat).sort((a,b)=>b.impact-a.impact||new Date(b.updated)-new Date(a.updated)).slice(0,12);
+  return{n:all.length,html:`<div class="cats">${cats.map(c=>`<button aria-pressed="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join("")}</div>`+list.map(t=>`<details class="story" style="--c:var(${COL[t.category]||"--mute"})"><summary><span class="cat">${esc(t.category)}</span>${t.impact>=4?'<span class="hi">High impact</span>':""}<b>${esc(t.title)}</b><span class="meta">${t.items.length} update${t.items.length>1?"s":""}, latest ${ago(t.updated)}</span>${t.effect?`<span class="fx">Why it matters: ${esc(t.effect)}</span>`:""}${chips(t)}</summary><ul>${t.items.map(i=>`<li><a href="${esc(safe(i.link))}" target="_blank" rel="noopener">${esc(i.title)}</a><div class="meta">${esc(i.source)}, ${ago(i.time)}</div></li>`).join("")}</ul></details>`).join("")}}
+function buildCal(){const u=data.upcoming||[];if(!u.length)return null;
+  return{n:u.length,html:`<div class="grid">${u.map(e=>`<div class="ev ${e.impact==="High"?"hot":""}"><b>${esc(e.title)}</b><span class="meta">${esc(e.country)}, ${new Date(e.time).toLocaleString([],{weekday:"short",hour:"2-digit",minute:"2-digit"})}</span><div class="cd">${until(e.time)}</div>${e.forecast||e.previous?`<div class="meta">Forecast ${esc(e.forecast||"-")}, previous ${esc(e.previous||"-")}</div>`:""}</div>`).join("")}</div>`}}
+function buildLive(){if(!ais)return null;const ok=Object.keys(ais.areas).filter(n=>{const l=latest(ais.areas[n]);return l.vessels>=10&&l.typed_pct>=60});if(!ok.length)return null;
+  return{n:ok.length,html:`<div class="grid">${ok.map(n=>{const l=latest(ais.areas[n]);return`<div class="ev"><b>${esc(n)}</b><div class="big">${l.tankers}<span> tankers today so far</span></div><div class="meta">${l.vessels} vessels seen, ${l.capacity_mbbl}M barrels of tanker capacity</div></div>`}).join("")}</div><p class="src">Counts come from a volunteer ship-tracking network and cover only the ships it hears. Tanker capacity is ship size, not cargo.</p>`}}
+const PANELS=[
+ {id:"brief",icon:"doc",title:"Market Brief",blurb:"Your morning read: what happened and what to watch",open:1,build:buildBrief},
+ {id:"research",icon:"lens",title:"Research",blurb:"Independent company analysis and deep dives",open:1,build:buildResearch},
+ {id:"routes",icon:"ship",title:"Oil & Trade Routes",blurb:"How many ships pass the world's key sea lanes, and why it moves oil, freight and inflation",open:1,build:buildRoutes},
+ {id:"movers",icon:"bolt",title:"Market Movers",blurb:"The stories most likely to move markets right now",open:1,build:buildMovers},
+ {id:"cal",icon:"cal",title:"Economic Calendar",blurb:"Central bank decisions and data releases coming up",open:0,build:buildCal},
+ {id:"live",icon:"radar",title:"Live Vessel Traffic",blurb:"Tankers and ships spotted right now at busy sea lanes",open:0,build:buildLive}];
+function render(){$("glance").innerHTML=glance();
+  $("panels").innerHTML=PANELS.map(p=>{const r=p.build();if(!r)return"";
+  return`<details class="panel" id="p-${p.id}" data-id="${p.id}" ${open[p.id]??p.open?"open":""}><summary><span class="ic">${I[p.icon]}</span><span class="pt"><b>${p.title}</b><small>${p.blurb}</small></span><span class="badge">${r.n}</span><span class="chev">${chev}</span></summary><div class="pb">${r.html}</div></details>`}).join("")}
+function setAll(v){PANELS.forEach(p=>open[p.id]=v);try{localStorage.setItem("open",JSON.stringify(open))}catch{}render()}
+$("panels").addEventListener("toggle",e=>{const d=e.target;if(d.dataset&&d.dataset.id){open[d.dataset.id]=d.open;try{localStorage.setItem("open",JSON.stringify(open))}catch{}}},true);
+$("panels").addEventListener("click",e=>{const b=e.target.closest(".cats button");if(b){cat=b.dataset.c;render()}});
+$("panels").addEventListener("pointermove",hover);$("panels").addEventListener("pointerout",unhover);
+$("glance").addEventListener("click",()=>{open.routes=true;render()});
+$("exp").onclick=()=>setAll(true);$("col").onclick=()=>setAll(false);
+$("brand").textContent=SITE.name;$("tag").textContent=SITE.tagline;document.title=SITE.name;
+if(SITE.subscribe){const a=$("cta");a.hidden=false;a.href=safe(SITE.subscribe);a.textContent="Get research updates"}
+async function jget(p){try{const r=await fetch(DATA_BASE+p+"?t="+Date.now());return r.ok?await r.json():null}catch{return null}}
+async function load(){const[e,w,a,s,r]=await Promise.all(["events.json","data/portwatch.json","data/ais_daily.json","data/articles.json","data/research.json"].map(jget)),g=JSON.stringify([e,w,a,s,r]);
+  if(g===sig)return;sig=g;data=e||{threads:[],upcoming:[]};pw=w;ais=a;arts=(s&&s.articles)||[];posts=(r&&r.posts)||[];
+  $("stamp").textContent=e?"Updated "+ago(e.updated):"Waiting for the first update";render()}
+load();setInterval(load,3e5);setInterval(()=>{if(data.updated)$("stamp").textContent="Updated "+ago(data.updated)},6e4);
 </script>
 </body>
 </html>

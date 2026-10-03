@@ -60,7 +60,7 @@ def summarize(rows):
     cur = avg(last7, "total")
     chg = round(100 * (cur / base - 1)) if base else None
     return {"latest_date": rows[-1]["date"], "avg7_total": cur, "avg7_tanker": avg(last7, "tanker"),
-            "change_pct": chg, "series": rows[-60:]}
+            "change_pct": chg, "baseline_total": base, "series": rows[-120:]}
 
 
 def main():
