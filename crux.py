@@ -33,11 +33,13 @@ Reply with ONE JSON object and nothing else, with these keys:
 
 
 class _Text(HTMLParser):
-    SKIP = {"script", "style", "nav", "header", "footer", "noscript", "svg", "form", "aside"}
+    STRICT = {"script", "style", "nav", "header", "footer", "noscript", "svg", "aside"}
+    LOOSE = {"script", "style", "noscript", "svg"}
     BLOCK = {"p", "div", "br", "li", "tr", "td", "h1", "h2", "h3", "h4", "table"}
 
-    def __init__(self):
+    def __init__(self, loose=False):
         super().__init__(convert_charrefs=True)
+        self.SKIP = self.LOOSE if loose else self.STRICT
         self.skip, self.parts = 0, []
 
     def handle_starttag(self, tag, attrs):
@@ -57,8 +59,8 @@ class _Text(HTMLParser):
             self.parts.append(data)
 
 
-def html_to_text(html):
-    p = _Text()
+def html_to_text(html, loose=False):
+    p = _Text(loose)
     p.feed(html)
     keep = []
     for line in "".join(p.parts).split("\n"):
@@ -66,6 +68,12 @@ def html_to_text(html):
         if len(line) >= 40 or (len(line) >= 12 and "%" in line and re.search(r"\d", line)):
             keep.append(line)
     return "\n".join(keep)[:MAX_CHARS]
+
+
+def page_text(url):
+    html = fetch(url)
+    t = html_to_text(html)
+    return t if len(t) >= MIN_CHARS else max(t, html_to_text(html, loose=True), key=len)
 
 
 def fetch(url, tries=3):
@@ -124,21 +132,21 @@ def gather(c):
     chunks, srcs = [], []
     if c.get("resolution"):
         try:
-            t = html_to_text(fetch(c["resolution"]))
+            t = page_text(c["resolution"])
             if "Monetary Policy Committee" in t and len(t) > 300:
                 chunks.append("RESOLUTION OF THE MONETARY POLICY COMMITTEE:\n" + t[:12000])
                 srcs.append({"label": "MPC Resolution", "url": c["resolution"]})
         except Exception as ex:
             print(f"[warn] {c['id']}: resolution not read ({type(ex).__name__})")
     for label, url in c["urls"]:
-        chunks.append(f"{label.upper()}:\n" + html_to_text(fetch(url)))
+        chunks.append(f"{label.upper()}:\n" + page_text(url))
         srcs.append({"label": label, "url": url})
     text = "\n\n".join(chunks)[:MAX_CHARS]
     return (text if len(text) >= MIN_CHARS else None), srcs
 
 
 def ask_claude(text, label, bank):
-    body = {"model": MODEL, "max_tokens": 1500, "temperature": 0.2, "system": SYSTEM,
+    body = {"model": MODEL, "max_tokens": 1500, "system": SYSTEM,
             "messages": [{"role": "user", "content": f"Bank: {bank}. Document: {label}.\n\n<document>\n{text}\n</document>"}]}
     data = json.dumps(body).encode()
     for i in range(4):
