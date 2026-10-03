@@ -64,6 +64,10 @@ summary{cursor:pointer;list-style:none}summary::-webkit-details-marker{display:n
 .ab{padding:0 16px 12px;max-width:70ch}
 .empty{color:var(--mute);padding:14px;border:1px dashed var(--line);border-radius:10px;margin:8px 0}
 footer{color:var(--mute);font-size:13px;padding:10px 0 48px}
+.tile.idx{grid-column:1/-1}.route.idx{grid-column:1/-1}
+.ev-l{stroke:var(--mute);stroke-dasharray:2 3}.ev-t{fill:var(--mute);font-size:8.5px}
+.bk{border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px}.bk h3{margin:0;font:600 18px "Fraunces",Georgia,serif}
+.bk ul{margin:8px 0;padding-left:20px}.bk .dec{font-weight:600;margin:6px 0}.tone{display:inline-block;margin-left:8px;padding:1px 10px;border-radius:99px;font-size:12px;border:1px solid var(--line);color:var(--sea)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -79,7 +83,7 @@ footer{color:var(--mute);font-size:13px;padding:10px 0 48px}
   <footer>Ship transit data: UN Global Platform and IMF PortWatch (portwatch.imf.org). News links go to their publishers. Briefs are written by AI from public headlines and official data, for information only. Nothing here is investment advice or a recommendation to buy, sell or hold any security.</footer>
 </main>
 <script>
-const SITE={name:"Market Pulse",tagline:"Oil routes, central banks and company research",subscribe:""};
+const SITE={name:"Market Pulse",tagline:"Oil routes, central banks and company research",subscribe:"",indexName:"Sea-Lane Stress Index"};
 const DATA_BASE=""; // set to your new host URL when you move, e.g. "https://data.example.com/"
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -88,7 +92,7 @@ const ic=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 const I={doc:ic('<path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 15h7M9 7h3"/>'),lens:ic('<circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/>'),
  ship:ic('<path d="M3 18c2 0 2-1.5 4.5-1.5S10 18 12 18s2.5-1.5 4.5-1.5S19 18 21 18"/><path d="m5 13 1.5-5h11L19 13z"/><path d="M12 8V4h3"/>'),
  bolt:ic('<path d="M13 3 5 14h6l-1 7 8-11h-6z"/>'),cal:ic('<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>'),
- radar:ic('<circle cx="12" cy="12" r="2"/><path d="M7.5 7.5a6.4 6.4 0 0 0 0 9M16.5 7.5a6.4 6.4 0 0 1 0 9M4.5 4.5a10.6 10.6 0 0 0 0 15M19.5 4.5a10.6 10.6 0 0 1 0 15"/>')};
+ bank:ic('<path d="M3 10 12 4l9 6"/><path d="M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18"/>'),radar:ic('<circle cx="12" cy="12" r="2"/><path d="M7.5 7.5a6.4 6.4 0 0 0 0 9M16.5 7.5a6.4 6.4 0 0 1 0 9M4.5 4.5a10.6 10.6 0 0 0 0 15M19.5 4.5a10.6 10.6 0 0 1 0 15"/>')};
 const chev=ic('<path d="m6 9 6 6 6-6"/>');
 const ago=i=>{const m=Math.max(0,(Date.now()-new Date(i))/6e4);return m<1?"just now":m<60?Math.round(m)+" min ago":m<1440?Math.round(m/60)+" h ago":Math.round(m/1440)+" d ago"};
 const until=i=>{const s=(new Date(i)-Date.now())/1e3;if(s<=0)return"happening now";const d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);return"in "+(d?d+"d ":"")+(h||d?h+"h ":"")+m+"m"};
@@ -99,27 +103,33 @@ const R={Hormuz:{n:"Strait of Hormuz",s:"Hormuz",w:"The Gulf's only sea exit. Ab
  Malacca:{n:"Strait of Malacca",s:"Malacca",w:"Asia's busiest oil artery, linking the Indian and Pacific oceans and feeding China, Japan and Korea."}};
 const KW={Hormuz:/hormuz|persian gulf|gulf of oman|\biran/i,"Bab-el-Mandeb":/red sea|houthi|\byemen|gulf of aden|bab[- ]el/i,Malacca:/malacca|singapore strait/i,Suez:/suez/i};
 const COL={Fed:"--sea",RBI:"--sea",Conflict:"--bad",Crude:"--gold",Commodity:"--gold",Markets:"--ink"};
-let data={threads:[],upcoming:[]},pw=null,ais=null,arts=[],posts=[],sig="",cat="All",open={};
+let cx=null,data={threads:[],upcoming:[]},pw=null,ais=null,arts=[],posts=[],sig="",cat="All",open={};
 try{open=JSON.parse(localStorage.getItem("open")||"{}")}catch{}
 const days=a=>Object.keys(a.history).sort(),latest=a=>a.history[days(a).pop()];
 function trend(c){const d=c.change_pct;if(d==null)return{t:"Building history",k:""};
   return d<0?{t:`▼ ${-d}% below usual`,k:d<=-25?"bad":""}:{t:`▲ ${d}% above usual`,k:d>=25?"good":""}}
 const niceMax=m=>{const p=10**Math.floor(Math.log10(m)),f=m/p;return(f<=1?1:f<=2?2:f<=5?5:10)*p};
 const CH={W:320,H:150,L:30,R:8,T:12,B:22};
-function chart(k,c){const s=c.series||[];if(s.length<3)return"";const{W,H,L,R:Rr,T,B}=CH,v=s.map(x=>x.total),n=v.length,base=c.baseline_total??null,top=niceMax(Math.max(...v,base||0,1));
+let EV=[];const SER={};
+function chart(k,name,s,vk,base,unit){if(!s||s.length<3)return"";const{W,H,L,R:Rr,T,B}=CH,v=s.map(x=>x[vk]),n=v.length,top=niceMax(Math.max(...v,base||0,1));SER[k]={s,vk,unit,top};
   const X=i=>L+i*(W-L-Rr)/(n-1),Y=y=>T+(1-y/top)*(H-T-B),f=x=>x.toFixed(1),pts=v.map((y,i)=>f(X(i))+","+f(Y(y))).join(" ");
   const grid=[0,top/2,top].map(g=>`<line class="gl" x1="${L}" x2="${W-Rr}" y1="${f(Y(g))}" y2="${f(Y(g))}"/><text class="ax" x="${L-4}" y="${f(Y(g)+3)}" text-anchor="end">${g}</text>`).join("");
   const us=base?`<line class="us" x1="${L}" x2="${W-Rr}" y1="${f(Y(base))}" y2="${f(Y(base))}"/><text class="ul" x="${W-Rr}" y="${f(Y(base)-4)}" text-anchor="end">usual ${Math.round(base)}</text>`:"";
-  return`<div class="cw" data-k="${esc(k)}" data-top="${top}"><svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Ships per day through ${esc(R[k].n)}">${grid}<polygon class="ar" points="${L},${f(Y(0))} ${pts} ${f(X(n-1))},${f(Y(0))}"/>${us}<polyline class="ln" points="${pts}"/><circle class="dot" cx="${f(X(n-1))}" cy="${f(Y(v[n-1]))}" r="3.5"/><line class="hv" y1="${T}" y2="${H-B}"/><circle class="hc" r="4"/><text class="ax" x="${L}" y="${H-6}">${fd(s[0].date)}</text><text class="ax" x="${W-Rr}" y="${H-6}" text-anchor="end">${fd(s[n-1].date)}</text></svg><div class="tip"></div></div>`}
-function hover(e){const w=e.target.closest(".cw");if(!w||!pw)return;const c=pw.chokepoints[w.dataset.k],s=c.series,n=s.length,r=w.getBoundingClientRect(),{W,H,L,R:Rr,T,B}=CH,top=+w.dataset.top;
-  const i=Math.max(0,Math.min(n-1,Math.round(((e.clientX-r.left)/r.width*W-L)/(W-L-Rr)*(n-1)))),x=L+i*(W-L-Rr)/(n-1),y=T+(1-s[i].total/top)*(H-T-B);
+  const ev=EV.filter(e=>e.date>=s[0].date&&e.date<=s[n-1].date&&(k==="index"||!e.routes||e.routes.includes(k))).map((e,j)=>{const i=Math.max(0,s.findIndex(x=>x.date>=e.date)),x=X(i);
+    return`<line class="ev-l" x1="${f(x)}" x2="${f(x)}" y1="${T}" y2="${H-B}"/><text class="ev-t" x="${f(x)}" y="${T+8+j%2*10}" ${x>W*.6?'text-anchor="end" dx="-3"':'dx="3"'}>${esc(e.label)}</text>`}).join("");
+  return`<div class="cw" data-k="${esc(k)}"><svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(name)}, ${esc(unit)} per day">${grid}<polygon class="ar" points="${L},${f(Y(0))} ${pts} ${f(X(n-1))},${f(Y(0))}"/>${us}${ev}<polyline class="ln" points="${pts}"/><circle class="dot" cx="${f(X(n-1))}" cy="${f(Y(v[n-1]))}" r="3.5"/><line class="hv" y1="${T}" y2="${H-B}"/><circle class="hc" r="4"/><text class="ax" x="${L}" y="${H-6}">${fd(s[0].date)}</text><text class="ax" x="${W-Rr}" y="${H-6}" text-anchor="end">${fd(s[n-1].date)}</text></svg><div class="tip"></div></div>`}
+function hover(e){const w=e.target.closest(".cw");if(!w||!SER[w.dataset.k])return;const{s,vk,unit,top}=SER[w.dataset.k],n=s.length,r=w.getBoundingClientRect(),{W,H,L,R:Rr,T,B}=CH;
+  const i=Math.max(0,Math.min(n-1,Math.round(((e.clientX-r.left)/r.width*W-L)/(W-L-Rr)*(n-1)))),x=L+i*(W-L-Rr)/(n-1),y=T+(1-s[i][vk]/top)*(H-T-B);
   const hv=w.querySelector(".hv"),hc=w.querySelector(".hc"),tip=w.querySelector(".tip");
   hv.setAttribute("x1",x);hv.setAttribute("x2",x);hv.style.opacity=1;hc.setAttribute("cx",x);hc.setAttribute("cy",y);hc.style.opacity=1;
-  tip.textContent=`${fd(s[i].date)}: ${s[i].total} ships`;tip.style.left=(x/W*r.width)+"px";tip.style.opacity=1}
+  tip.textContent=`${fd(s[i].date)}: ${s[i][vk]} ${unit}`;tip.style.left=(x/W*r.width)+"px";tip.style.opacity=1}
 function unhover(e){const w=e.target.closest(".cw");if(w&&!w.contains(e.relatedTarget)){w.querySelector(".hv").style.opacity=0;w.querySelector(".hc").style.opacity=0;w.querySelector(".tip").style.opacity=0}}
 function chips(t){if(!pw)return"";const x=t.title+" "+t.items.map(i=>i.title).join(" ");
   return Object.keys(KW).filter(k=>pw.chokepoints[k]&&KW[k].test(x)).map(k=>{const c=pw.chokepoints[k];return`<span class="chip">${esc(R[k].s)}: ${c.avg7_total} ships a day${c.change_pct==null?"":", "+trend(c).t.replace(/^[▲▼] /,"")}</span>`}).join("")}
-function glance(){if(!pw)return"";return Object.keys(R).filter(k=>pw.chokepoints[k]).map(k=>{const c=pw.chokepoints[k],t=trend(c);
+function idxTile(){const x=pw&&pw.index;if(!x)return"";return`<a class="tile idx" href="#p-routes" data-open="routes"><span>${esc(SITE.indexName)}</span><b>${x.latest}</b><small>out of 100</small><em class="${x.latest>=25?"bad":""}">${x.band}, ${x.change_7d>=0?"▲ up":"▼ down"} ${Math.abs(x.change_7d)} this week</em></a>`}
+function indexCard(){const x=pw&&pw.index;if(!x)return"";
+  return`<article class="route idx"><h3>${esc(SITE.indexName)}</h3><p class="why">One score for how far shipping through four key sea lanes is falling short of normal. 0 means normal traffic, 100 means the lanes are empty.</p><div class="big">${x.latest}<span> out of 100, ${x.band}</span></div><div class="tr ${x.latest>=25?"bad":""}">${x.change_7d>=0?"▲ up":"▼ down"} ${Math.abs(x.change_7d)} points in a week</div>${chart("index",SITE.indexName,x.series,"value",null,"points")}<div>${Object.keys(x.components).map(k=>`<span class="chip">${esc(R[k]?R[k].s:k)} ${x.components[k]}</span>`).join("")}</div><p class="foot">How it is built: for each route we compare the last 7 days with the 90 days before, count only the shortfall, then average the routes equally. "Normal" is a rolling 90-day average, so in a very long disruption the score eases even if traffic stays low. It is our own indicator, not an official statistic.</p></article>`}
+function glance(){if(!pw)return"";return idxTile()+Object.keys(R).filter(k=>pw.chokepoints[k]).map(k=>{const c=pw.chokepoints[k],t=trend(c);
   return`<a class="tile" href="#p-routes" data-open="routes"><span>${R[k].s}</span><b>${c.avg7_total}</b><small>ships a day</small><em class="${t.k}">${t.t}</em></a>`}).join("")}
 function buildBrief(){const a=arts.slice(0,3);if(!a.length)return null;
   return{n:a.length,html:a.map((x,i)=>`<details class="art" ${i?"":"open"}><summary><b>${esc(x.title)}</b><span class="meta">${esc(x.kind)}, ${fd(x.date)}. Written by AI from public headlines and official data.</span></summary><div class="ab">${x.body.split(/\n\s*\n/).map(p=>`<p>${esc(p)}</p>`).join("")}<p class="meta">Sources: ${x.sources.map(s=>`<a href="${esc(safe(s.link))}" target="_blank" rel="noopener">${esc(s.source)}</a>`).join(", ")}</p></div></details>`).join("")}}
@@ -130,8 +140,8 @@ function buildRoutes(){const ks=Object.keys(R).filter(k=>pw&&pw.chokepoints[k]);
   const big=ks.reduce((a,k)=>Math.abs(pw.chokepoints[k].change_pct||0)>Math.abs(pw.chokepoints[a].change_pct||0)?k:a,ks[0]),b=pw.chokepoints[big],
   lead=b.change_pct==null?"":`Biggest shift: ${R[big].n} is seeing ${b.avg7_total} ships a day, ${Math.abs(b.change_pct)}% ${b.change_pct<0?"below":"above"} its usual pace.`,
   last=ks.map(k=>pw.chokepoints[k].latest_date).sort().pop();
-  return{n:ks.length,html:`<p class="lead">${esc(lead)}</p><div class="routes">${ks.map(k=>{const c=pw.chokepoints[k],t=trend(c);
-  return`<article class="route"><h3>${R[k].n}</h3><p class="why">${R[k].w}</p><div class="big">${c.avg7_total}<span> ships a day</span></div><div class="tr ${t.k}">${t.t}</div>${chart(k,c)}<p class="foot">${c.avg7_tanker} of them tankers. Latest data: ${fd(c.latest_date)}.</p></article>`}).join("")}</div>
+  return{n:ks.length,html:`<p class="lead">${esc(lead)}</p><div class="routes">${indexCard()}${ks.map(k=>{const c=pw.chokepoints[k],t=trend(c);
+  return`<article class="route"><h3>${R[k].n}</h3><p class="why">${R[k].w}</p><div class="big">${c.avg7_total}<span> ships a day</span></div><div class="tr ${t.k}">${t.t}</div>${chart(k,R[k].n,c.series,"total",c.baseline_total,"ships")}<p class="foot">${c.avg7_tanker} of them tankers. Latest data: ${fd(c.latest_date)}.</p></article>`}).join("")}</div>
   <p class="src">Each line shows ships passing per day. The gold line, "usual", is the average of the 90 days before the latest week. Latest data: ${fd(last)}. Source: UN Global Platform; IMF PortWatch (portwatch.imf.org).</p>`}}
 function buildMovers(){const cut=Date.now()-48*36e5,all=(data.threads||[]).filter(t=>t.impact>=3&&new Date(t.updated)>cut);
   if(!all.length)return{n:0,html:'<p class="empty">No big market stories right now. New ones appear here as they break.</p>'};
@@ -141,11 +151,23 @@ function buildCal(){const u=data.upcoming||[];if(!u.length)return null;
   return{n:u.length,html:`<div class="grid">${u.map(e=>`<div class="ev ${e.impact==="High"?"hot":""}"><b>${esc(e.title)}</b><span class="meta">${esc(e.country)}, ${new Date(e.time).toLocaleString([],{weekday:"short",hour:"2-digit",minute:"2-digit"})}</span><div class="cd">${until(e.time)}</div>${e.forecast||e.previous?`<div class="meta">Forecast ${esc(e.forecast||"-")}, previous ${esc(e.previous||"-")}</div>`:""}</div>`).join("")}</div>`}}
 function buildLive(){if(!ais)return null;const ok=Object.keys(ais.areas).filter(n=>{const l=latest(ais.areas[n]);return l.vessels>=10&&l.typed_pct>=60});if(!ok.length)return null;
   return{n:ok.length,html:`<div class="grid">${ok.map(n=>{const l=latest(ais.areas[n]);return`<div class="ev"><b>${esc(n)}</b><div class="big">${l.tankers}<span> tankers today so far</span></div><div class="meta">${l.vessels} vessels seen, ${l.capacity_mbbl}M barrels of tanker capacity</div></div>`}).join("")}</div><p class="src">Counts come from a volunteer ship-tracking network and cover only the ships it hears. Tanker capacity is ship size, not cargo.</p>`}}
+const BK={RBI:"Reserve Bank of India (RBI)",FED:"US Federal Reserve (Fed)"},TONE={tighter:"Reads tighter",steady:"Reads steady",easier:"Reads easier",unclear:"Tone unclear"};
+function bankCard(x,full){return`<article class="bk"><h3>${esc(BK[x.bank]||x.bank)}</h3><span class="meta">${esc(x.title)}</span><span class="tone">${esc(TONE[x.tone]||TONE.unclear)}</span>
+  <p class="dec">${esc(x.headline)}</p>${x.decision?`<p>${esc(x.decision)}</p>`:""}<p>${esc(x.summary)}</p>
+  <ul>${x.points.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>
+  ${x.watch&&x.watch.length?`<p class="meta">What the statement says is being watched: ${x.watch.map(esc).join("; ")}.</p>`:""}
+  ${(x.numbers||[]).map(n=>`<span class="chip">${esc(n.label)}: ${esc(n.value)}</span>`).join("")}
+  <p class="meta">Summary written by AI from the official documents and checked against them for figures. Read the originals: ${x.sources.map(s=>`<a href="${esc(safe(s.url))}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(", ")}.</p></article>`}
+function buildBanks(){const it=(cx&&cx.items)||[];if(!it.length)return null;
+  const banks=Object.keys(BK).filter(b=>it.some(x=>x.bank===b)),html=banks.map(b=>{const l=it.filter(x=>x.bank===b).sort((p,q)=>q.date.localeCompare(p.date));
+    return bankCard(l[0])+(l.length>1?`<details class="art"><summary><b>Earlier decisions</b></summary><div class="ab">${l.slice(1).map(x=>`<p><b>${esc(x.title)}</b>: ${esc(x.headline)}</p>`).join("")}</div></details>`:"")}).join("");
+  return{n:it.length,html}}
 const PANELS=[
  {id:"brief",icon:"doc",title:"Market Brief",blurb:"Your morning read: what happened and what to watch",open:1,build:buildBrief},
  {id:"research",icon:"lens",title:"Research",blurb:"Independent company analysis and deep dives",open:1,build:buildResearch},
  {id:"routes",icon:"ship",title:"Oil & Trade Routes",blurb:"How many ships pass the world's key sea lanes, and why it moves oil, freight and inflation",open:1,build:buildRoutes},
  {id:"movers",icon:"bolt",title:"Market Movers",blurb:"The stories most likely to move markets right now",open:1,build:buildMovers},
+ {id:"banks",icon:"bank",title:"Central Banks, the Crux",blurb:"What the RBI and the Fed just decided, in plain English",open:1,build:buildBanks},
  {id:"cal",icon:"cal",title:"Economic Calendar",blurb:"Central bank decisions and data releases coming up",open:0,build:buildCal},
  {id:"live",icon:"radar",title:"Live Vessel Traffic",blurb:"Tankers and ships spotted right now at busy sea lanes",open:0,build:buildLive}];
 function render(){$("glance").innerHTML=glance();
@@ -160,8 +182,8 @@ $("exp").onclick=()=>setAll(true);$("col").onclick=()=>setAll(false);
 $("brand").textContent=SITE.name;$("tag").textContent=SITE.tagline;document.title=SITE.name;
 if(SITE.subscribe){const a=$("cta");a.hidden=false;a.href=safe(SITE.subscribe);a.textContent="Get research updates"}
 async function jget(p){try{const r=await fetch(DATA_BASE+p+"?t="+Date.now());return r.ok?await r.json():null}catch{return null}}
-async function load(){const[e,w,a,s,r]=await Promise.all(["events.json","data/portwatch.json","data/ais_daily.json","data/articles.json","data/research.json"].map(jget)),g=JSON.stringify([e,w,a,s,r]);
-  if(g===sig)return;sig=g;data=e||{threads:[],upcoming:[]};pw=w;ais=a;arts=(s&&s.articles)||[];posts=(r&&r.posts)||[];
+async function load(){const[e,w,a,s,r,m,k]=await Promise.all(["events.json","data/portwatch.json","data/ais_daily.json","data/articles.json","data/research.json","markers.json","data/crux.json"].map(jget)),g=JSON.stringify([e,w,a,s,r,m,k]);
+  if(g===sig)return;sig=g;data=e||{threads:[],upcoming:[]};pw=w;ais=a;arts=(s&&s.articles)||[];posts=(r&&r.posts)||[];EV=(m&&m.markers)||[];cx=k;
   $("stamp").textContent=e?"Updated "+ago(e.updated):"Waiting for the first update";render()}
 load();setInterval(load,3e5);setInterval(()=>{if(data.updated)$("stamp").textContent="Updated "+ago(data.updated)},6e4);
 </script>
