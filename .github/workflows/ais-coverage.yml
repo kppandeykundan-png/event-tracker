@@ -1,0 +1,24 @@
+name: AIS coverage check
+
+on:
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: "Minutes to listen"
+        default: "2"
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install websockets
+      - name: Measure world coverage
+        env:
+          AISSTREAM_API_KEY: ${{ secrets.AISSTREAM_API_KEY }}
+          MINUTES: ${{ github.event.inputs.minutes }}
+        run: python ais_coverage.py
