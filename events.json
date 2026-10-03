@@ -1,6 +1,141 @@
 {
- "updated": "2026-10-03T13:13:57.840761+00:00",
+ "updated": "2026-10-03T14:58:18.238048+00:00",
  "threads": [
+  {
+   "id": "t32bbcbfe",
+   "title": "Kenya road crash kills 17 pilgrims",
+   "category": "Other",
+   "items": [
+    {
+     "id": "b0fea3656a33",
+     "title": "At least 17 people, mostly pilgrims, killed in Kenya road crash",
+     "link": "https://www.aljazeera.com/news/2026/10/3/at-least-17-people-mostly-pilgrims-killed-in-kenya-road-crash?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T14:30:40+00:00",
+     "category": "Other",
+     "effect": "No direct market impact; humanitarian tragedy in Kenya."
+    }
+   ],
+   "updated": "2026-10-03T14:30:40+00:00",
+   "effect": "No direct market impact; humanitarian tragedy in Kenya."
+  },
+  {
+   "id": "t534b24d1",
+   "title": "India parliamentary panel recommends stricter crypto transaction monitoring",
+   "category": "Fed",
+   "items": [
+    {
+     "id": "9b100ebc2c75",
+     "title": "Parliamentary panel may recommend stricter monitoring of crypto transactions in India",
+     "link": "https://economictimes.indiatimes.com/news/economy/policy/parliamentary-panel-may-recommend-stricter-monitoring-of-crypto-transactions-in-india/articleshow/134661535.cms",
+     "source": "Economic Times Economy",
+     "time": "2026-10-03T14:26:33+00:00",
+     "category": "Fed",
+     "effect": "Stricter crypto monitoring may increase regulatory compliance costs domestically."
+    },
+    {
+     "id": "cd2f2e1218f1",
+     "title": "Parliamentary panel may recommend govt for action on monitoring crypto",
+     "link": "https://www.business-standard.com/markets/cryptocurrency/parliamentary-panel-may-recommend-govt-for-action-on-monitoring-crypto-126100300786_1.html",
+     "source": "Business Standard Markets",
+     "time": "2026-10-03T14:04:52+00:00",
+     "category": "Fed",
+     "effect": "Stricter crypto monitoring may increase regulatory compliance costs domestically."
+    }
+   ],
+   "updated": "2026-10-03T14:26:33+00:00",
+   "effect": "Stricter crypto monitoring may increase regulatory compliance costs domestically."
+  },
+  {
+   "id": "t2dbe1d95",
+   "title": "Brazil's 2026 presidential election outlook",
+   "category": "Other",
+   "items": [
+    {
+     "id": "f415d3ae1266",
+     "title": "What to know about Brazil’s 2026 presidential election",
+     "link": "https://www.aljazeera.com/news/2026/10/3/what-to-know-about-brazils-2026-presidential-election?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T14:23:55+00:00",
+     "category": "Other",
+     "effect": "Brazil political developments; limited direct impact on Indian markets."
+    }
+   ],
+   "updated": "2026-10-03T14:23:55+00:00",
+   "effect": "Brazil political developments; limited direct impact on Indian markets."
+  },
+  {
+   "id": "ta1825738",
+   "title": "Israel election double standards: Arab leader versus far-right",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "3e3097c9672f",
+     "title": "Israel election double standard: Arab leader forced out, far right cleared",
+     "link": "https://www.aljazeera.com/news/2026/10/3/israel-election-double-standard-arab-leader-forced-out-far-right-cleared?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T14:06:47+00:00",
+     "category": "Conflict",
+     "effect": "Regional political tensions; limited direct impact on commodity or financial markets."
+    }
+   ],
+   "updated": "2026-10-03T14:06:47+00:00",
+   "effect": "Regional political tensions; limited direct impact on commodity or financial markets."
+  },
+  {
+   "id": "tc893f3be",
+   "title": "Brazil accuses US of election interference",
+   "category": "Other",
+   "items": [
+    {
+     "id": "e39e5318e150",
+     "title": "Why has Brazil accused the US of election interference?",
+     "link": "https://www.bbc.co.uk/news/videos/c3eweld0nddeo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": "2026-10-03T13:52:13+00:00",
+     "category": "Other",
+     "effect": "US-Brazil tension over elections; limited direct market impact."
+    }
+   ],
+   "updated": "2026-10-03T13:52:13+00:00",
+   "effect": "US-Brazil tension over elections; limited direct market impact."
+  },
+  {
+   "id": "t0416e52b",
+   "title": "India surge in crude oil imports from Middle East",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "24ef5b56371d",
+     "title": "India sees surge in crude oil imports from Middle East - Arab News",
+     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdzRrYXRfd24xVXVvSmZpeGFmTHo5WC1KUUhzb1FETTFXeGFtWC1sbDNUazdfZXBBcEx6Yl9VTDl3V1EzYUsxcTJoaG8tWTFFOUxZNUx1RHoxTk54Ni1jVjRERmp5b2R1VXVNSXA1NzBlZDVvaHhGd1N2dmN1TS16X21WaFp2ZHRmMkJaLVhfdVJMZVpzbUhGaQ?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-03T13:22:17+00:00",
+     "category": "Crude",
+     "effect": "Increased crude imports from Middle East support global energy market stability."
+    }
+   ],
+   "updated": "2026-10-03T13:22:17+00:00",
+   "effect": "Increased crude imports from Middle East support global energy market stability."
+  },
+  {
+   "id": "t81359f82",
+   "title": "Britain's military in Kenya: Justice and immunity allegations",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "fe97599612f6",
+     "title": "Britain’s military in Kenya: Allegations, immunity and a fight for justice",
+     "link": "https://www.aljazeera.com/features/longform/2026/10/3/britains-military-in-kenya-allegations-immunity-and-a-fight-for-justice?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T13:18:37+00:00",
+     "category": "Conflict",
+     "effect": "UK military allegations in Kenya; limited direct market impact."
+    }
+   ],
+   "updated": "2026-10-03T13:18:37+00:00",
+   "effect": "UK military allegations in Kenya; limited direct market impact."
+  },
   {
    "id": "ta4c6c1a9",
    "title": "Gadkari proposes global infrastructure conduct code",
@@ -38,6 +173,78 @@
    "effect": "Sebi's new auction rules may improve market transparency and liquidity."
   },
   {
+   "id": "t87b25cb8",
+   "title": "Ethiopia’s government forces retake airport from Tigray rebels in Mekelle",
+   "category": "Other",
+   "items": [
+    {
+     "id": "3238f2859f2d",
+     "title": "Ethiopian gov’t forces advance in Tigray as rebels retreat: What to know",
+     "link": "https://www.aljazeera.com/news/2026/10/3/ethiopian-govt-forces-advance-in-tigray-as-rebels-retreat-what-to-know?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T13:00:57+00:00",
+     "category": "Conflict",
+     "effect": "Ethiopian conflict progress; minimal direct impact on Indian markets."
+    },
+    {
+     "id": "52d27657b6df",
+     "title": "Ethiopia’s government forces retake airport from Tigray rebels in Mekelle",
+     "link": "https://www.aljazeera.com/news/2026/10/3/rebels-pulling-back-as-addis-ababas-forces-advance-reports-say?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T11:16:43+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T13:00:57+00:00",
+   "effect": "Ethiopian conflict progress; minimal direct impact on Indian markets."
+  },
+  {
+   "id": "t23b214d6",
+   "title": "France high school fire amid student protests",
+   "category": "Conflict",
+   "items": [
+    {
+     "id": "dfef3862f196",
+     "title": "French high school engulfed in flames as student protests continue",
+     "link": "https://www.aljazeera.com/video/newsfeed/2026/10/3/french-high-school-engulfed-in-flames-as-student-protests-continue?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T12:59:27+00:00",
+     "category": "Conflict",
+     "effect": "French social unrest; limited direct impact on Indian markets."
+    }
+   ],
+   "updated": "2026-10-03T12:59:27+00:00",
+   "effect": "French social unrest; limited direct impact on Indian markets."
+  },
+  {
+   "id": "t06d35c0b",
+   "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
+   "category": "Other",
+   "items": [
+    {
+     "id": "e8407c9bd4e0",
+     "title": "Five killed as Kyiv and Moscow trade strikes, Russia hits second bridge",
+     "link": "https://www.aljazeera.com/news/2026/10/3/five-killed-as-kyiv-and-moscow-trade-strikes-russia-hits-second-bridge?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T12:55:54+00:00",
+     "category": "Conflict",
+     "effect": "Kyiv-Moscow escalation; geopolitical risk elevation supports crude prices."
+    },
+    {
+     "id": "bd2b1c49298e",
+     "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
+     "link": "https://www.bbc.co.uk/news/articles/c83vqxzdg1yko?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": "2026-10-03T11:48:41+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T12:55:54+00:00",
+   "effect": "Kyiv-Moscow escalation; geopolitical risk elevation supports crude prices."
+  },
+  {
    "id": "t2b54a10a",
    "title": "CBI files charge sheet in Rs 3,750 crore RCom-LIC fraud",
    "category": "Markets",
@@ -54,6 +261,24 @@
    ],
    "updated": "2026-10-03T12:47:50+00:00",
    "effect": "CBI charge sheet in major fraud case may impact RCom creditors."
+  },
+  {
+   "id": "t75d6bd74",
+   "title": "China resumes curbs on fuel exports, tightening global markets",
+   "category": "Crude",
+   "items": [
+    {
+     "id": "6fd753eb7801",
+     "title": "China Resumes Curbs on Fuel Exports, Tightening Global Energy Markets - The New York Times",
+     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQMG9mN3BIeUw3clNoaTdsYkpwdUt2YmM2QmU0aE9Nem0zTXFkUE82ZGJMSG9wRmx4N0J5Y3BlMEktMzEwLUlxTmpZRmlZRG5qVkRzbUZHaDh1YVU3TFltNFZXZEs5NjE2Z0UtSEYwQ2swR0diRTkxYjBCZF96NXlrLXhB?oc=5",
+     "source": "Google News Markets",
+     "time": "2026-10-03T12:47:00+00:00",
+     "category": "Crude",
+     "effect": "China fuel export curbs tighten global energy; supports crude price upside."
+    }
+   ],
+   "updated": "2026-10-03T12:47:00+00:00",
+   "effect": "China fuel export curbs tighten global energy; supports crude price upside."
   },
   {
    "id": "t73a3c99f",
@@ -200,24 +425,6 @@
    "effect": "Coffee cultivation expansion may support rural economy in Arunachal Pradesh."
   },
   {
-   "id": "t06d35c0b",
-   "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
-   "category": "Other",
-   "items": [
-    {
-     "id": "bd2b1c49298e",
-     "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
-     "link": "https://www.bbc.co.uk/news/articles/c83vqxzdg1yko?at_medium=RSS&at_campaign=rss",
-     "source": "BBC World",
-     "time": "2026-10-03T11:48:41+00:00",
-     "category": "Other",
-     "effect": ""
-    }
-   ],
-   "updated": "2026-10-03T11:48:41+00:00",
-   "effect": ""
-  },
-  {
    "id": "tf3cc70ac",
    "title": "TCS, Infosys, Wipro shares ahead of Q2 results: Explained | What Accenture's strong earnings mean for Indian IT stocks",
    "category": "Other",
@@ -308,24 +515,6 @@
    "effect": ""
   },
   {
-   "id": "t87b25cb8",
-   "title": "Ethiopia’s government forces retake airport from Tigray rebels in Mekelle",
-   "category": "Other",
-   "items": [
-    {
-     "id": "52d27657b6df",
-     "title": "Ethiopia’s government forces retake airport from Tigray rebels in Mekelle",
-     "link": "https://www.aljazeera.com/news/2026/10/3/rebels-pulling-back-as-addis-ababas-forces-advance-reports-say?traffic_source=rss",
-     "source": "Al Jazeera",
-     "time": "2026-10-03T11:16:43+00:00",
-     "category": "Other",
-     "effect": ""
-    }
-   ],
-   "updated": "2026-10-03T11:16:43+00:00",
-   "effect": ""
-  },
-  {
    "id": "t8ebd3efb",
    "title": "Palestinians gather for football amid Gaza’s ruins",
    "category": "Other",
@@ -410,10 +599,19 @@
      "time": "2026-10-03T10:48:28+00:00",
      "category": "Other",
      "effect": ""
+    },
+    {
+     "id": "28aaf3d32896",
+     "title": "Yemen’s army claims over 1,500 Houthi casualties, attacks Sanaa",
+     "link": "https://www.aljazeera.com/news/2026/10/3/over-1500-houthi-casualties-in-past-24-hours-yemeni-army-says?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": "2026-10-03T08:36:17+00:00",
+     "category": "Conflict",
+     "effect": "Yemen military gains against Houthis; Middle East tension sustains crude premium."
     }
    ],
    "updated": "2026-10-03T10:48:28+00:00",
-   "effect": ""
+   "effect": "Yemen military gains against Houthis; Middle East tension sustains crude premium."
   },
   {
    "id": "t1096f806",
