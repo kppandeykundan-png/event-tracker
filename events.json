@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T09:53:49.420014+00:00",
+ "updated": "2026-10-03T10:04:10.725805+00:00",
  "threads": [
   {
    "id": "t6429c7f2",
@@ -20,6 +20,42 @@
    "effect": ""
   },
   {
+   "id": "t245ddafa",
+   "title": "Sebi examining position limits for non-agri contracts to boost liquidity",
+   "category": "Other",
+   "items": [
+    {
+     "id": "2997fbe535d8",
+     "title": "Sebi examining position limits for non-agri contracts to boost liquidity",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-examining-position-limits-for-non-agri-contracts-to-boost-liquidity/articleshow/134656225.cms",
+     "source": "Economic Times Markets",
+     "time": "2026-10-03T09:46:13+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T09:46:13+00:00",
+   "effect": ""
+  },
+  {
+   "id": "t80d9bde7",
+   "title": "Dalal Street Week Ahead: Oversold Nifty may rebound as volatility stays high",
+   "category": "Other",
+   "items": [
+    {
+     "id": "0eecc7366742",
+     "title": "Dalal Street Week Ahead: Oversold Nifty may rebound as volatility stays high",
+     "link": "https://economictimes.indiatimes.com/markets/stocks/news/dalal-street-week-ahead-oversold-nifty-may-rebound-as-volatility-stays-high/articleshow/134654990.cms",
+     "source": "Economic Times Markets",
+     "time": "2026-10-03T09:38:01+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T09:38:01+00:00",
+   "effect": ""
+  },
+  {
    "id": "te31496f1",
    "title": "India may finalise MRFA deal by current financial year: IAF chief",
    "category": "Other",
@@ -35,6 +71,24 @@
     }
    ],
    "updated": "2026-10-03T09:37:42+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tc399bc2d",
+   "title": "Drought, fodder crisis push Latur farmers to harvest sugarcane for cattle feed",
+   "category": "Other",
+   "items": [
+    {
+     "id": "242f85a2f0ee",
+     "title": "Drought, fodder crisis push Latur farmers to harvest sugarcane for cattle feed",
+     "link": "https://economictimes.indiatimes.com/news/economy/agriculture/drought-fodder-crisis-push-latur-farmers-to-harvest-sugarcane-for-cattle-feed/articleshow/134656084.cms",
+     "source": "Economic Times Economy",
+     "time": "2026-10-03T09:31:55+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T09:31:55+00:00",
    "effect": ""
   },
   {
@@ -107,6 +161,24 @@
     }
    ],
    "updated": "2026-10-03T09:00:57+00:00",
+   "effect": ""
+  },
+  {
+   "id": "td349bffc",
+   "title": "Suppliers pile pressure on government over energy bills",
+   "category": "Other",
+   "items": [
+    {
+     "id": "2471ccec40da",
+     "title": "Suppliers pile pressure on government over energy bills",
+     "link": "https://www.bbc.co.uk/news/articles/cq0ld88kzxw8o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": "2026-10-03T08:58:44+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T08:58:44+00:00",
    "effect": ""
   },
   {
@@ -1359,6 +1431,24 @@
     {
      "id": "f7f2e5f251b4",
      "title": "Why electric cars might be making some passengers feel sick",
+     "link": "https://www.bbc.co.uk/news/articles/c3y0zx822wlzo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": "2026-10-03T02:36:19+00:00",
+     "category": "Other",
+     "effect": ""
+    }
+   ],
+   "updated": "2026-10-03T02:36:19+00:00",
+   "effect": ""
+  },
+  {
+   "id": "tf5eeb153",
+   "title": "EV drivers love their cars, but some passengers feel sick - this could be why",
+   "category": "Other",
+   "items": [
+    {
+     "id": "8157f438afb6",
+     "title": "EV drivers love their cars, but some passengers feel sick - this could be why",
      "link": "https://www.bbc.co.uk/news/articles/c3y0zx822wlzo?at_medium=RSS&at_campaign=rss",
      "source": "BBC World",
      "time": "2026-10-03T02:36:19+00:00",
